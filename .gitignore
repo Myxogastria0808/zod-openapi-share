@@ -1,0 +1,7 @@
+.direnv/
+.vscode/
+coverage/
+dist/
+docs/
+html/
+node_modules/
