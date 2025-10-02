@@ -17,9 +17,9 @@
     "unpub": "pnpm unpublish  zod-openapi-share@${npm_config_v}",
     "build": "tsup",
     "typedoc": "pnpm dlx typedoc",
-    "test": "vitest --typecheck",
-    "coverage": "vitest --coverage --typecheck",
-    "ui": "vitest --ui --typecheck"
+    "test": "vitest run --typecheck",
+    "coverage": "vitest run --coverage --typecheck",
+    "ui": "vitest run --ui --typecheck"
   },
   "repository": {
     "type": "git",
