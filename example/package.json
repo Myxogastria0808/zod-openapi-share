@@ -5,15 +5,17 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "openapi": "tsx src/openapi.ts"
   },
   "packageManager": "pnpm@10.13.1",
   "dependencies": {
     "@hono/node-server": "catalog:example",
-    "hono": "catalog:"
+    "hono": "catalog:",
+    "@hono/zod-openapi": "catalog:",
+    "zod-openapi-share": "workspace:*"
   },
   "devDependencies": {
-    "@hono/zod-openapi": "catalog:",
     "@types/node": "catalog:example",
     "tsx": "catalog:",
     "typescript": "catalog:"

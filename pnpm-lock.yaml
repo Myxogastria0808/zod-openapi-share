@@ -88,13 +88,16 @@ importers:
       '@hono/node-server':
         specifier: catalog:example
         version: 1.19.5(hono@4.9.9)
-      hono:
-        specifier: 'catalog:'
-        version: 4.9.9
-    devDependencies:
       '@hono/zod-openapi':
         specifier: 'catalog:'
         version: 1.1.3(hono@4.9.9)(zod@4.1.11)
+      hono:
+        specifier: 'catalog:'
+        version: 4.9.9
+      zod-openapi-share:
+        specifier: workspace:*
+        version: link:../package
+    devDependencies:
       '@types/node':
         specifier: catalog:example
         version: 20.19.19

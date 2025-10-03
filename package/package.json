@@ -10,15 +10,9 @@
     "typescript",
     "wrapper"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist",
-    "package.json",
-    "README.md",
-    "COPYING"
-  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": {
@@ -31,6 +25,12 @@
       }
     }
   },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "COPYING"
+  ],
   "scripts": {
     "pub": "pnpm publish --access=public",
     "unpub": "pnpm unpublish  zod-openapi-share@${npm_config_v}",

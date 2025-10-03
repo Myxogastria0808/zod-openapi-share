@@ -10,7 +10,8 @@
     "package:ui": "pnpm -C package ui",
     "example:dev": "pnpm -C example dev",
     "example:build": "pnpm -C example build",
-    "example:start": "pnpm -C example start"
+    "example:start": "pnpm -C example start",
+    "example:openapi": "pnpm -C example openapi"
   },
   "packageManager": "pnpm@10.13.1",
   "devDependencies": {
