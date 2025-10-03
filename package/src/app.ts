@@ -1,17 +1,20 @@
 import type { RouteConfig } from '@hono/zod-openapi';
 import type { NeverWrapper, ResponsesConfig, UniqueTuple, UserDefinedStatusCode } from './types';
 
+/**
+ * A class that helps create OpenAPI response schemas using Zod schemas.
+ */
 export class ZodOpenAPISchema<M extends ResponsesConfig> {
   private responses: Readonly<M>;
+  /**
+   * Constructor to initialize the ZodOpenAPISchema class with a ResponsesConfig type object.
+   * @param responses ResponsesConfig type object (A type object that defines response schemas for each status code. This type object is provided by the user.)
+   */
   constructor(responses: M) {
     this.responses = responses;
   }
-  // NOTE
-  /*
-    オプショナルな引数であることによって、never型のときにundefinedになって型の不整合のエラーを起こしていたのを
-    オーバーロードで引数なしとありの2パターンを用意することで独自型が目的の型との型の不整合を起こさせることができ、
-    その結果、型推論によって発生するエラーに独自型を表出させることができたっぽい。
-  */
+
+  // Overload signatures
   // statusCodes argument omitted
   createSchema<R extends RouteConfig>(route: R): R;
   // statusCodes argument included
@@ -20,6 +23,12 @@ export class ZodOpenAPISchema<M extends ResponsesConfig> {
     statusCodes: NeverWrapper<UserDefinedStatusCode<M>, T>
   ): R;
 
+  /**
+   * Create a new RouteConfig type object by adding specified status codes to the responses of the given route.
+   * @param route RouteConfig type object (This type object  is provided by @hono/zod-openapi).
+   * @param statusCodes An array of status codes (only user-defined ones) to be added to the route. (This argument is optional.)
+   * @returns A RouteConfig type object with the specified status codes added to the responses.
+   */
   createSchema<R extends RouteConfig, T extends Readonly<UserDefinedStatusCode<M>[]>>(
     route: R,
     statusCodes?: UniqueTuple<UserDefinedStatusCode<M>, T>

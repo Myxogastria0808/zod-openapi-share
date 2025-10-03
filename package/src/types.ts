@@ -96,7 +96,7 @@ export type NeverWrapper<Elm extends UserDefinedStatusCode<ResponsesConfig>, T e
   T
 > extends never
   ? {
-      __error: 'Status codes must be unique.';
+      __error: 'Status codes have to be unique.';
       __duplicate_status_codes: DuplicateStatusCode<Elm, T>;
     }
   : UniqueTuple<Elm, T>;
