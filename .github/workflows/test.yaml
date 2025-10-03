@@ -18,4 +18,4 @@ jobs:
         with:
           nix_path: nixpkgs=channel:nixpkgs-unstable
       - name: Test
-        run: nix develop --command bash -c "pnpm i && pnpm run test"
+        run: nix develop --command bash -c "pnpm i && pnpm run package:test"
