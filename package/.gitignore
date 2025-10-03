@@ -1,0 +1,6 @@
+# JavaScript/TypeScript
+coverage/
+dist/
+docs/
+html/
+node_modules/

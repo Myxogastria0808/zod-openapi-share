@@ -1,0 +1,21 @@
+{
+  "name": "example",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "packageManager": "pnpm@10.13.1",
+  "dependencies": {
+    "@hono/node-server": "catalog:example",
+    "hono": "catalog:"
+  },
+  "devDependencies": {
+    "@hono/zod-openapi": "catalog:",
+    "@types/node": "catalog:example",
+    "tsx": "catalog:",
+    "typescript": "catalog:"
+  }
+}

@@ -6,16 +6,15 @@ export class ZodOpenAPISchema<M extends ResponsesConfig> {
   constructor(responses: M) {
     this.responses = responses;
   }
-
   // NOTE
   /*
     オプショナルな引数であることによって、never型のときにundefinedになって型の不整合のエラーを起こしていたのを
     オーバーロードで引数なしとありの2パターンを用意することで独自型が目的の型との型の不整合を起こさせることができ、
     その結果、型推論によって発生するエラーに独自型を表出させることができたっぽい。
   */
-  // 引数なし
+  // statusCodes argument omitted
   createSchema<R extends RouteConfig>(route: R): R;
-  // 引数あり
+  // statusCodes argument included
   createSchema<R extends RouteConfig, T extends Readonly<UserDefinedStatusCode<M>[]>>(
     route: R,
     statusCodes: NeverWrapper<UserDefinedStatusCode<M>, T>
@@ -27,9 +26,10 @@ export class ZodOpenAPISchema<M extends ResponsesConfig> {
   ): R {
     if (statusCodes) {
       const extraResponses: ResponsesConfig = {};
+      // Collect responses for the specified status codes
       for (const statusCode of statusCodes) {
         const response = this.responses[statusCode];
-        // Add only if the response is defined
+        // This process adds only status codes that are defined by the user.
         if (response) {
           extraResponses[statusCode] = response;
         }
@@ -43,7 +43,7 @@ export class ZodOpenAPISchema<M extends ResponsesConfig> {
         },
       } as R;
     }
-    // If no status codes are provided, return the original route
+    // When no status codes are provided, return the route as is.
     return route;
   }
 }

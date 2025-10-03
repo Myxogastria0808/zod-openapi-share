@@ -1,0 +1,70 @@
+{
+  "name": "zod-openapi-share",
+  "version": "0.0.1",
+  "description": "This package works the wrapper of @hono/zod-openapi.",
+  "keywords": [
+    "@hono/zod-openapi",
+    "hono",
+    "zod",
+    "openapi",
+    "typescript",
+    "wrapper"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "COPYING"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "require": "./dist/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "pub": "pnpm publish --access=public",
+    "unpub": "pnpm unpublish  zod-openapi-share@${npm_config_v}",
+    "build": "tsup",
+    "typedoc": "pnpm dlx typedoc",
+    "test": "vitest run --typecheck",
+    "coverage": "vitest run --coverage --typecheck",
+    "ui": "vitest run --ui --typecheck"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Myxogastria0808/zod-openapi-share.git"
+  },
+  "author": "Yuki Osada",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Myxogastria0808/zod-openapi-share/issues"
+  },
+  "homepage": "https://myxogastria0808.github.io/zod-openapi-share/",
+  "packageManager": "pnpm@10.13.1",
+  "dependencies": {
+    "@hono/zod-openapi": "catalog:"
+  },
+  "peerDependencies": {
+    "@hono/zod-openapi": "catalog:",
+    "hono": "catalog:"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "catalog:package",
+    "@vitest/ui": "catalog:package",
+    "tsup": "catalog:package",
+    "tsx": "catalog:",
+    "typedoc": "catalog:package",
+    "typescript": "catalog:",
+    "vitest": "catalog:package"
+  }
+}
