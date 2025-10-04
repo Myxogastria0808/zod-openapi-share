@@ -3,6 +3,7 @@ import { cors } from 'hono/cors';
 import { HTTPException } from 'hono/http-exception';
 import { type ErrorResponseSchemaType } from './share.js';
 import { rootRoute } from './route.js';
+import { Scalar } from '@scalar/hono-api-reference';
 
 export const api = () => {
   const app = new OpenAPIHono({
@@ -44,6 +45,21 @@ export const api = () => {
 
   // Settings of CORS
   app.use('*', cors());
+
+  // OpenAPI Document Endpoint
+  app.doc('/openapi', {
+    openapi: '3.0.0',
+    info: {
+      title: 'Echo API',
+      version: '1.0.0',
+      description: '受け取った入力値をそのまま応答するAPI',
+    },
+  });
+
+  // Scalar Web UI Endpoint
+  // References
+  // https://guides.scalar.com/scalar/scalar-api-references/integrations/hono
+  app.get('/scalar', Scalar({ url: '/openapi' }));
 
   /**
    * Add route to app instance

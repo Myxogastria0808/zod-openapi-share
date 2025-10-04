@@ -10,9 +10,10 @@
   },
   "packageManager": "pnpm@10.13.1",
   "dependencies": {
-    "@hono/node-server": "catalog:examples",
-    "hono": "catalog:",
     "@hono/zod-openapi": "catalog:",
+    "@hono/node-server": "catalog:examples",
+    "@scalar/hono-api-reference": "catalog:examples",
+    "hono": "catalog:",
     "zod-openapi-share": "workspace:*"
   },
   "devDependencies": {

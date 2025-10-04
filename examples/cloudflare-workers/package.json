@@ -8,8 +8,9 @@
     "openapi": "tsx src/openapi.ts"
   },
   "dependencies": {
-    "hono": "catalog:",
     "@hono/zod-openapi": "catalog:",
+    "@scalar/hono-api-reference": "catalog:examples",
+    "hono": "catalog:",
     "zod-openapi-share": "workspace:*"
   },
   "devDependencies": {
