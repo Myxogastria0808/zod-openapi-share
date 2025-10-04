@@ -11,17 +11,38 @@
 ![Typedoc](https://img.shields.io/badge/docs-typedoc-blue?style=flat-square&logo=typescript&logoColor=white)
 [![RenovateBot](https://img.shields.io/badge/RenovateBot-1A1F6C?logo=renovate&logoColor=fff)](#)
 
-
-// TODO: AIに箇条書きで説明を書いて、説明文を英語で吐かせる
-`zod-openapi-share` is a package that works as a wrapper for `@hono/zod-openapi`.
+`zod-openapi-share` is an extension for `@hono/zod-openapi` that lets you centralize and reuse response definitions across endpoints.
+Normally, `@hono/zod-openapi` requires you to redefine the same responses (e.g., error schemas) for every endpoint, but with `zod-openapi-share`, you can avoid repetition and prevent definition drift, making your backend development using `hono` + `@hono/zod-openapi` cleaner and more consistent.
 
 > [!IMPORTANT]
 > Be sure to use the latest version.
 
+## What is `zod-openapi-share`?
+
+In projects using `hono`, you may have opportunities to use a convenient package called `@hono/zod-openapi` as middleware for generating OpenAPI schemas.
+This package allows you to define both **OpenAPI schemas** and **Zod-based validation** at the same time.
+
+However, it has a major drawback: you must repeatedly write out the `responses` definitions for every single status code across all endpoints.
+In many cases, error responses share the exact same structure across endpoints — yet, even if they are identical, you still have to duplicate those definitions.
+
+To solve this, `zod-openapi-share` provides a way to **centralize and reuse response definitions** by wrapping around `@hono/zod-openapi`.
+Think of `zod-openapi-share` as an extension package for `@hono/zod-openapi`.
+When using it, you’ll need three packages together: `hono`, `@hono/zod-openapi`, and `zod-openapi-share`.
+
+By unifying response definitions, you can develop without worrying about unintended inconsistencies between endpoints.
+If you’re using hono and @hono/zod-openapi, be sure to try **zod-openapi-share**!
+
 ## How to Use
 
+**Examples Here**
+
+- cloudflare workers example
+  - https://github.com/Myxogastria0808/zod-openapi-share/tree/main/examples/cloudflare-workers/
+
+- nodejs example
+  - https://github.com/Myxogastria0808/zod-openapi-share/tree/main/examples/nodejs/
+
 // TODO: 修正を入れる + 対象のファイルのリンクを貼る
-// TODO: exampleを `nodejs` と `cloudflare` の2つ用意する
 // TODO: 以下のノリでbeforeとafterの差分を書き、このパッケージを使うメリットを説明する
 https://notepm.jp/markdown-table-tool
 |                                       |                                                            |

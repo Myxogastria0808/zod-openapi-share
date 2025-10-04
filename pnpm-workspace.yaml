@@ -20,3 +20,4 @@ catalogs:
     tsup: ^8.5.0
     typedoc: ^0.28.13
     vitest: ^3.2.4
+    zod: ^4.1.11

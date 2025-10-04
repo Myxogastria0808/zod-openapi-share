@@ -11,7 +11,8 @@
 ![Typedoc](https://img.shields.io/badge/docs-typedoc-blue?style=flat-square&logo=typescript&logoColor=white)
 [![RenovateBot](https://img.shields.io/badge/RenovateBot-1A1F6C?logo=renovate&logoColor=fff)](#)
 
-`zod-openapi-share` is a package that works as a wrapper for `@hono/zod-openapi`.
+`zod-openapi-share` is an extension for `@hono/zod-openapi` that lets you centralize and reuse response definitions across endpoints.
+Normally, `@hono/zod-openapi` requires you to redefine the same responses (e.g., error schemas) for every endpoint, but with `zod-openapi-share`, you can avoid repetition and prevent definition drift, making your backend development using `hono` + `@hono/zod-openapi` cleaner and more consistent.
 
 > [!IMPORTANT]
 > Be sure to use the latest version.

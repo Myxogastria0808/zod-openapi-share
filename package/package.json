@@ -65,6 +65,7 @@
     "tsx": "catalog:",
     "typedoc": "catalog:package",
     "typescript": "catalog:",
-    "vitest": "catalog:package"
+    "vitest": "catalog:package",
+    "zod": "catalog:package"
   }
 }
