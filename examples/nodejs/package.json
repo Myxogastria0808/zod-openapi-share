@@ -1,0 +1,23 @@
+{
+  "name": "nodejs",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "openapi": "tsx src/openapi.ts"
+  },
+  "packageManager": "pnpm@10.13.1",
+  "dependencies": {
+    "@hono/node-server": "catalog:examples",
+    "hono": "catalog:",
+    "@hono/zod-openapi": "catalog:",
+    "zod-openapi-share": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:examples",
+    "tsx": "catalog:",
+    "typescript": "catalog:"
+  }
+}

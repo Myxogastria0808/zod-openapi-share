@@ -1,0 +1,17 @@
+{
+  "name": "cloudflare-workers-example",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+  },
+  "dependencies": {
+    "hono": "catalog:",
+    "@hono/zod-openapi": "catalog:",
+    "zod-openapi-share": "workspace:*"
+  },
+  "devDependencies": {
+    "wrangler": "catalog:examples"
+  }
+}
