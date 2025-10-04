@@ -50,7 +50,7 @@
     "url": "https://github.com/Myxogastria0808/zod-openapi-share/issues"
   },
   "homepage": "https://myxogastria0808.github.io/zod-openapi-share/",
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.18.0",
   "dependencies": {
     "@hono/zod-openapi": "catalog:"
   },
