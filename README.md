@@ -16,7 +16,7 @@
 > [!IMPORTANT]
 > Be sure to use the latest version.
 
-## README.md
+## README (package description and how to use)
 
 https://github.com/Myxogastria0808/zod-openapi-share/tree/main/package/README.md
 
