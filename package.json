@@ -14,7 +14,8 @@
     "examples:nodejs:openapi": "pnpm -C examples/nodejs openapi",
     "examples:cloudflare-workers:dev": "pnpm -C examples/cloudflare-workers dev",
     "examples:cloudflare-workers:deploy": "pnpm -C examples/cloudflare-workers deploy",
-    "examples:cloudflare-workers:cf-typegen": "pnpm -C examples/cloudflare-workers cf-typegen"
+    "examples:cloudflare-workers:cf-typegen": "pnpm -C examples/cloudflare-workers cf-typegen",
+    "examples:cloudflare-workers:openapi": "pnpm -C examples/cloudflare-workers openapi"
   },
   "packageManager": "pnpm@10.13.1",
   "devDependencies": {
