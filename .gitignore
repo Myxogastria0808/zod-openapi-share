@@ -2,5 +2,4 @@
 .direnv/
 
 # JavaScript
-.vscode/
 node_modules/
