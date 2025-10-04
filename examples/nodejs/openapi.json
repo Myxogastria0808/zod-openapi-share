@@ -1,9 +1,9 @@
 {
-  "openapi": "3.0.0",
+  "openapi": "3.1.0",
   "info": {
-    "title": "hono + @hono/zod-openapi sample",
+    "title": "hono + @hono/zod-openapi + zod-openapi-share sample",
     "version": "1.0.0",
-    "description": "HonoとZodでOpenAPIドキュメントを生成するサンプルです。"
+    "description": "This is a sample project to generate OpenAPI documents with Hono and Zod."
   },
   "components": {
     "schemas": {},
@@ -27,7 +27,9 @@
                       "description": "Sample Endpoint Response"
                     }
                   },
-                  "required": ["result"]
+                  "required": [
+                    "result"
+                  ]
                 }
               }
             }
@@ -43,243 +45,363 @@
                       "anyOf": [
                         {
                           "type": "number",
-                          "enum": [100]
+                          "enum": [
+                            100
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [102]
+                          "enum": [
+                            102
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [103]
+                          "enum": [
+                            103
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [200]
+                          "enum": [
+                            200
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [201]
+                          "enum": [
+                            201
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [202]
+                          "enum": [
+                            202
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [203]
+                          "enum": [
+                            203
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [206]
+                          "enum": [
+                            206
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [207]
+                          "enum": [
+                            207
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [208]
+                          "enum": [
+                            208
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [226]
+                          "enum": [
+                            226
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [300]
+                          "enum": [
+                            300
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [301]
+                          "enum": [
+                            301
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [302]
+                          "enum": [
+                            302
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [303]
+                          "enum": [
+                            303
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [305]
+                          "enum": [
+                            305
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [306]
+                          "enum": [
+                            306
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [307]
+                          "enum": [
+                            307
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [308]
+                          "enum": [
+                            308
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [400]
+                          "enum": [
+                            400
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [401]
+                          "enum": [
+                            401
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [402]
+                          "enum": [
+                            402
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [403]
+                          "enum": [
+                            403
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [404]
+                          "enum": [
+                            404
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [405]
+                          "enum": [
+                            405
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [406]
+                          "enum": [
+                            406
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [407]
+                          "enum": [
+                            407
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [408]
+                          "enum": [
+                            408
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [409]
+                          "enum": [
+                            409
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [410]
+                          "enum": [
+                            410
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [411]
+                          "enum": [
+                            411
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [412]
+                          "enum": [
+                            412
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [413]
+                          "enum": [
+                            413
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [414]
+                          "enum": [
+                            414
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [415]
+                          "enum": [
+                            415
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [416]
+                          "enum": [
+                            416
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [417]
+                          "enum": [
+                            417
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [418]
+                          "enum": [
+                            418
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [421]
+                          "enum": [
+                            421
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [422]
+                          "enum": [
+                            422
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [423]
+                          "enum": [
+                            423
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [424]
+                          "enum": [
+                            424
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [425]
+                          "enum": [
+                            425
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [426]
+                          "enum": [
+                            426
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [428]
+                          "enum": [
+                            428
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [429]
+                          "enum": [
+                            429
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [431]
+                          "enum": [
+                            431
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [451]
+                          "enum": [
+                            451
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [500]
+                          "enum": [
+                            500
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [501]
+                          "enum": [
+                            501
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [502]
+                          "enum": [
+                            502
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [503]
+                          "enum": [
+                            503
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [504]
+                          "enum": [
+                            504
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [505]
+                          "enum": [
+                            505
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [506]
+                          "enum": [
+                            506
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [507]
+                          "enum": [
+                            507
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [508]
+                          "enum": [
+                            508
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [510]
+                          "enum": [
+                            510
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [511]
+                          "enum": [
+                            511
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [-1]
+                          "enum": [
+                            -1
+                          ]
                         }
                       ],
                       "example": 400,
@@ -292,7 +414,10 @@
                       "description": "Error Message"
                     }
                   },
-                  "required": ["status", "message"]
+                  "required": [
+                    "status",
+                    "message"
+                  ]
                 }
               }
             }
@@ -308,243 +433,363 @@
                       "anyOf": [
                         {
                           "type": "number",
-                          "enum": [100]
+                          "enum": [
+                            100
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [102]
+                          "enum": [
+                            102
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [103]
+                          "enum": [
+                            103
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [200]
+                          "enum": [
+                            200
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [201]
+                          "enum": [
+                            201
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [202]
+                          "enum": [
+                            202
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [203]
+                          "enum": [
+                            203
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [206]
+                          "enum": [
+                            206
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [207]
+                          "enum": [
+                            207
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [208]
+                          "enum": [
+                            208
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [226]
+                          "enum": [
+                            226
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [300]
+                          "enum": [
+                            300
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [301]
+                          "enum": [
+                            301
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [302]
+                          "enum": [
+                            302
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [303]
+                          "enum": [
+                            303
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [305]
+                          "enum": [
+                            305
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [306]
+                          "enum": [
+                            306
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [307]
+                          "enum": [
+                            307
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [308]
+                          "enum": [
+                            308
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [400]
+                          "enum": [
+                            400
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [401]
+                          "enum": [
+                            401
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [402]
+                          "enum": [
+                            402
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [403]
+                          "enum": [
+                            403
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [404]
+                          "enum": [
+                            404
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [405]
+                          "enum": [
+                            405
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [406]
+                          "enum": [
+                            406
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [407]
+                          "enum": [
+                            407
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [408]
+                          "enum": [
+                            408
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [409]
+                          "enum": [
+                            409
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [410]
+                          "enum": [
+                            410
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [411]
+                          "enum": [
+                            411
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [412]
+                          "enum": [
+                            412
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [413]
+                          "enum": [
+                            413
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [414]
+                          "enum": [
+                            414
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [415]
+                          "enum": [
+                            415
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [416]
+                          "enum": [
+                            416
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [417]
+                          "enum": [
+                            417
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [418]
+                          "enum": [
+                            418
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [421]
+                          "enum": [
+                            421
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [422]
+                          "enum": [
+                            422
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [423]
+                          "enum": [
+                            423
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [424]
+                          "enum": [
+                            424
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [425]
+                          "enum": [
+                            425
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [426]
+                          "enum": [
+                            426
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [428]
+                          "enum": [
+                            428
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [429]
+                          "enum": [
+                            429
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [431]
+                          "enum": [
+                            431
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [451]
+                          "enum": [
+                            451
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [500]
+                          "enum": [
+                            500
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [501]
+                          "enum": [
+                            501
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [502]
+                          "enum": [
+                            502
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [503]
+                          "enum": [
+                            503
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [504]
+                          "enum": [
+                            504
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [505]
+                          "enum": [
+                            505
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [506]
+                          "enum": [
+                            506
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [507]
+                          "enum": [
+                            507
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [508]
+                          "enum": [
+                            508
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [510]
+                          "enum": [
+                            510
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [511]
+                          "enum": [
+                            511
+                          ]
                         },
                         {
                           "type": "number",
-                          "enum": [-1]
+                          "enum": [
+                            -1
+                          ]
                         }
                       ],
                       "example": 400,
@@ -557,7 +802,10 @@
                       "description": "Error Message"
                     }
                   },
-                  "required": ["status", "message"]
+                  "required": [
+                    "status",
+                    "message"
+                  ]
                 }
               }
             }
@@ -565,5 +813,6 @@
         }
       }
     }
-  }
+  },
+  "webhooks": {}
 }
