@@ -8,16 +8,19 @@
     "package:test": "pnpm -C package test",
     "package:coverage": "pnpm -C package coverage",
     "package:ui": "pnpm -C package ui",
-    "example:dev": "pnpm -C example dev",
-    "example:build": "pnpm -C example build",
-    "example:start": "pnpm -C example start",
-    "example:openapi": "pnpm -C example openapi"
+    "examples:nodejs:dev": "pnpm -C examples/nodejs dev",
+    "examples:nodejs:build": "pnpm -C examples/nodejs build",
+    "examples:nodejs:start": "pnpm -C examples/nodejs start",
+    "examples:nodejs:openapi": "pnpm -C examples/nodejs openapi",
+    "examples:cloudflare-workers:dev": "pnpm -C examples/cloudflare-workers dev",
+    "examples:cloudflare-workers:deploy": "pnpm -C examples/cloudflare-workers deploy",
+    "examples:cloudflare-workers:cf-typegen": "pnpm -C examples/cloudflare-workers cf-typegen"
   },
   "packageManager": "pnpm@10.13.1",
   "devDependencies": {
-    "@hono/node-server": "catalog:example",
+    "@hono/node-server": "catalog:examples",
     "@hono/zod-openapi": "catalog:",
-    "@types/node": "catalog:example",
+    "@types/node": "catalog:examples",
     "@vitest/coverage-v8": "catalog:package",
     "@vitest/ui": "catalog:package",
     "hono": "catalog:",
@@ -26,6 +29,6 @@
     "typedoc": "catalog:package",
     "typescript": "catalog:",
     "vitest": "catalog:package",
-    "zod": "^4.1.11"
+    "wrangler": "catalog:examples"
   }
 }
