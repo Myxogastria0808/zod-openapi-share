@@ -1,8 +1,8 @@
 import { api } from './app/index.js';
 import fs from 'node:fs';
 
-const docs = api().getOpenAPIDocument({
-  openapi: '3.0.0',
+const docs = api().getOpenAPI31Document({
+  openapi: '3.1.0',
   info: {
     title: 'hono + @hono/zod-openapi + zod-openapi-share sample',
     version: '1.0.0',
