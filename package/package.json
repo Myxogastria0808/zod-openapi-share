@@ -1,7 +1,7 @@
 {
   "name": "zod-openapi-share",
   "version": "0.0.1",
-  "description": "This package works the wrapper of @hono/zod-openapi.",
+  "description": "This package is an extension for @hono/zod-openapi.",
   "keywords": [
     "@hono/zod-openapi",
     "hono",
