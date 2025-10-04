@@ -321,7 +321,7 @@ export const route = new ZodOpenAPISchema({
 - `createSchema` Method
 
 When you want to learn how to use `createRoute`,
-please refer to the [@hono/zod-openapi (https://hono.dev/examples/zod-openapi)](https://hono.dev/examples/zod-openapi).
+please refer to the [@hono/zod-openapi](https://hono.dev/examples/zod-openapi).
 
 ```ts
 zodOpenAPISchemaInstance.createSchema(
