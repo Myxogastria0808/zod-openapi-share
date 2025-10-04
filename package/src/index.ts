@@ -1,4 +1,5 @@
 export type {
+  DuplicateStatusCode,
   StatusCode,
   ResponsesEntry,
   ResponsesConfig,
