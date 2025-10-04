@@ -1,5 +1,3 @@
-export { ZodOpenAPISchema } from './app.js';
-
 export type {
   StatusCode,
   ResponsesEntry,
@@ -7,4 +5,6 @@ export type {
   UserDefinedStatusCode,
   UniqueTuple,
   NeverWrapper,
-} from './types.js';
+} from './lib/types.js';
+
+export { ZodOpenAPISchema } from './lib/schema.js';

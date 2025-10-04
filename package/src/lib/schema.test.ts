@@ -1,7 +1,7 @@
 import { describe, test, expect } from 'vitest';
 import { z } from 'zod';
 
-import { ZodOpenAPISchema } from './index.js';
+import { ZodOpenAPISchema } from '../index.js';
 import { createRoute } from '@hono/zod-openapi';
 
 describe('createSchema method test', () => {
