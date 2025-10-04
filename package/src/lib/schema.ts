@@ -22,7 +22,6 @@ export class ZodOpenAPISchema<M extends ResponsesConfig> {
    * The constructor to initialize the ZodOpenAPISchema class with a ResponsesConfig type object.
    *
    * @param {M} responses - The user-defined status codes type object (M extends ResponsesConfig).
-   * @returns {ZodOpenAPISchema<M>} - An instance of ZodOpenAPISchema class.
    *
    * @example
    * ```ts
