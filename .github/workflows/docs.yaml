@@ -24,7 +24,7 @@ jobs:
         continue-on-error: true
         run: nix develop --command bash -c "pnpm i && pnpm run package:ui"
       - name: Create docs directory
-        run: mkdir -p ./docs
+        run: mkdir -p docs
       - name: Move Vitest UI Report
         run: |
           mv ./package/html/ ./docs/html
