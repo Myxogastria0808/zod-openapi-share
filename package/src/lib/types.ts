@@ -82,8 +82,7 @@ export type ResponsesConfig = Partial<Record<StatusCode, ResponsesEntry>>;
 export type UserDefinedStatusCode<M extends ResponsesConfig> = Extract<StatusCode, keyof M>;
 
 /**
- * The type that identifies duplicate elements in a tuple.
- *
+ * The type that identifies duplicate elements in a tuple. \
  * If there are no duplicates, it returns an empty tuple.
  *
  * @template Elm - The type of elements in the tuple (Elm extends UserDefinedStatusCode<ResponsesConfig>).
@@ -103,7 +102,7 @@ export type DuplicateStatusCode<
   : Duplication;
 
 /**
- * The type that checks for duplicates in a tuple.
+ * The type that checks for duplicates in a tuple. \
  * If duplicates are found, it returns `never`; otherwise, it returns `Arr`.
  *
  * @template Elm - The type of elements in the tuple (Elm extends UserDefinedStatusCode<ResponsesConfig>).
