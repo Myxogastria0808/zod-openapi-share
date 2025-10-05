@@ -33,7 +33,8 @@ When using it, you’ll need three packages together: `hono`, `@hono/zod-openapi
 By unifying response definitions, you can develop without worrying about unintended inconsistencies between endpoints.
 If you’re using hono and @hono/zod-openapi, be sure to try `zod-openapi-share`!
 
-### before (`hono` + `@hono/zod-openapi`)
+<details>
+<summary>before (`hono` + `@hono/zod-openapi`)</summary>
 
 ```typescript
 import { z, createRoute } from '@hono/zod-openapi';
@@ -144,8 +145,10 @@ const rootPostRoute = createRoute({
 });
 
 ```
+</details>
 
-### after (`hono` + `@hono/zod-openapi` + `zod-openapi-share`)
+<details>
+<summary>after (`hono` + `@hono/zod-openapi` + `zod-openapi-share`)</summary>
 
 ```typescript
 import { z } from '@hono/zod-openapi';
@@ -253,6 +256,7 @@ const rootPostRoute = route.createSchema(
   [400, 500]
 );
 ```
+</details>
 
 ## How to Use
 
