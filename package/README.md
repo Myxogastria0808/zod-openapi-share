@@ -36,6 +36,8 @@ If you’re using hono and @hono/zod-openapi, be sure to try `zod-openapi-share`
 <details>
 <summary>before (`hono` + `@hono/zod-openapi`)</summary>
 
+### before (`hono` + `@hono/zod-openapi`)
+
 ```typescript
 import { z, createRoute } from '@hono/zod-openapi';
 
@@ -149,6 +151,8 @@ const rootPostRoute = createRoute({
 
 <details>
 <summary>after (`hono` + `@hono/zod-openapi` + `zod-openapi-share`)</summary>
+
+### after (`hono` + `@hono/zod-openapi` + `zod-openapi-share`)
 
 ```typescript
 import { z } from '@hono/zod-openapi';
