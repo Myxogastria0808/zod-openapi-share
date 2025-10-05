@@ -34,11 +34,11 @@ https://myxogastria0808.github.io/zod-openapi-share/coverage/
 
 https://myxogastria0808.github.io/zod-openapi-share/html/
 
-## example
+## Examples
 
-`hono` + `@hono/zod-openapi` + `zod-openapi-share` example
+`hono` + `@hono/zod-openapi` + `zod-openapi-share` examples
 
-https://github.com/Myxogastria0808/zod-openapi-share/tree/main/example/
+https://github.com/Myxogastria0808/zod-openapi-share/tree/main/examples/
 
 ## DeepWiki
 
