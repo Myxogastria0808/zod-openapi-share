@@ -20,17 +20,17 @@ Normally, `@hono/zod-openapi` requires you to redefine the same responses (e.g.,
 ## What is `zod-openapi-share`?
 
 In projects using `hono`, you may have opportunities to use a convenient package called `@hono/zod-openapi` as middleware for generating OpenAPI schemas.
-This package allows you to define both **OpenAPI schemas** and **Zod-based validation** at the same time.
+This package allows you to define both OpenAPI schemas and Zod-based validation at the same time.
 
 However, it has a major drawback: you must repeatedly write out the `responses` definitions for every single status code across all endpoints.
 In many cases, error responses share the exact same structure across endpoints — yet, even if they are identical, you still have to duplicate those definitions.
 
-To solve this, `zod-openapi-share` provides a way to **centralize and reuse response definitions** by wrapping around `@hono/zod-openapi`.
+To solve this, `zod-openapi-share` provides a way to centralize and reuse response definitions by wrapping around `@hono/zod-openapi`.
 Think of `zod-openapi-share` as an extension package for `@hono/zod-openapi`.
 When using it, you’ll need three packages together: `hono`, `@hono/zod-openapi`, and `zod-openapi-share`.
 
 By unifying response definitions, you can develop without worrying about unintended inconsistencies between endpoints.
-If you’re using hono and @hono/zod-openapi, be sure to try **zod-openapi-share**!
+If you’re using hono and @hono/zod-openapi, be sure to try `zod-openapi-share`!
 
 ### before (`hono` + `@hono/zod-openapi`)
 
