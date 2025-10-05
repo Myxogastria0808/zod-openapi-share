@@ -6,6 +6,7 @@
 ![GitHub Release](https://img.shields.io/github/v/release/Myxogastria0808/zod-openapi-share)
 ![NPM Type Definitions](https://img.shields.io/npm/types/zod-openapi-share)
 [![Download NPM](https://img.shields.io/npm/dm/zod-openapi-share.svg?style=flat)](https://www.npmjs.com/package/zod-openapi-share)
+[![NPM Downloads All Time](https://badgen.net/npm/dt/zod-openapi-share?label=downloads%20all%20time&color=cyan)](https://www.npmjs.com/package/zod-openapi-share)
 ![GitHub License](https://img.shields.io/github/license/Myxogastria0808/zod-openapi-share)
 ![Vitest](https://img.shields.io/badge/-vitest-6e9f18?style=flat&logo=vitest&logoColor=ffffff)
 ![Typedoc](https://img.shields.io/badge/docs-typedoc-blue?style=flat-square&logo=typescript&logoColor=white)
