@@ -52,7 +52,7 @@ export const api = () => {
     info: {
       title: 'Echo API',
       version: '1.0.0',
-      description: '受け取った入力値をそのまま応答するAPI',
+      description: 'An example of OpenAPI with hono, @hono/zod-openapi, and zod-openapi-share.',
     },
   });
 
