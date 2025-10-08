@@ -136,7 +136,7 @@ export type NeverWrapper<Elm extends UserDefinedStatusCode<ResponsesConfig>, T e
   : UniqueTuple<Elm, T>;
 
 /**
- * The interface that defines the methods of createSchema class.
+ * The interface that defines the methods of createOpenAPISchema class.
  */
 export type CreateSchemaInterface = {
   createSchema<M extends ResponsesConfig, R extends RouteConfig, T extends Readonly<UserDefinedStatusCode<M>[]>>(
