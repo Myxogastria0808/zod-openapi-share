@@ -1,5 +1,5 @@
 import type { RouteConfig } from '@hono/zod-openapi';
-import type { NeverWrapper, ResponsesConfig, UniqueTuple, UserDefinedStatusCode } from './types';
+import type { CreateSchemaInterface, NeverWrapper, ResponsesConfig, UniqueTuple, UserDefinedStatusCode } from './types';
 
 /**
  * The ZodOpenAPISchema class is a utility for creating OpenAPI schema definitions
@@ -8,7 +8,7 @@ import type { NeverWrapper, ResponsesConfig, UniqueTuple, UserDefinedStatusCode 
  * @template M - The user-defined status codes type (M extends ResponsesConfig).
  * @extends {ResponsesConfig}
  */
-export class ZodOpenAPISchema<M extends ResponsesConfig> {
+export class ZodOpenAPISchema<M extends ResponsesConfig> implements CreateSchemaInterface {
   /**
    * The private property that holds the user-defined status codes type object (M extends ResponsesConfig).
    *

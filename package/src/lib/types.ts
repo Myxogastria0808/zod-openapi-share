@@ -134,3 +134,13 @@ export type NeverWrapper<Elm extends UserDefinedStatusCode<ResponsesConfig>, T e
       __duplicate_status_codes: DuplicateStatusCode<Elm, T>;
     }
   : UniqueTuple<Elm, T>;
+
+/**
+ * The interface that defines the methods of createSchema class.
+ */
+export type CreateSchemaInterface = {
+  createSchema<M extends ResponsesConfig, R extends RouteConfig, T extends Readonly<UserDefinedStatusCode<M>[]>>(
+    route: R,
+    statusCodes?: UniqueTuple<UserDefinedStatusCode<M>, T>
+  ): R;
+};
