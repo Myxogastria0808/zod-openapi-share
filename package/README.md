@@ -38,7 +38,7 @@ If you’re using hono and @hono/zod-openapi, be sure to try `zod-openapi-share`
 
 ### before (`hono` + `@hono/zod-openapi`)
 
-```typescript
+```ts
 import { z, createRoute } from '@hono/zod-openapi';
 
 // Commonly Used Response Schema
@@ -154,7 +154,7 @@ const rootPostRoute = createRoute({
 
 ### after (`hono` + `@hono/zod-openapi` + `zod-openapi-share`)
 
-```typescript
+```ts
 import { z } from '@hono/zod-openapi';
 import { ZodOpenAPISchema } from 'zod-openapi-share';
 
@@ -284,7 +284,7 @@ npm install hono @hono/zod-openapi zod-openapi-share
 
 https://github.com/Myxogastria0808/zod-openapi-share/tree/main/examples/nodejs/src/app/share.ts
 
-```typescript
+```ts
 import { z } from '@hono/zod-openapi';
 import { ZodOpenAPISchema } from 'zod-openapi-share';
 
@@ -343,7 +343,7 @@ zodOpenAPISchemaInstance.createSchema(
 
 https://github.com/Myxogastria0808/zod-openapi-share/tree/main/examples/nodejs/src/app/route.ts
 
-```typescript
+```ts
 import { z } from '@hono/zod-openapi';
 import { route } from './share.js';
 
@@ -509,7 +509,7 @@ console.log(json);
 
 - Example
 
-```json
+```jsonc
 {
   "name": "example",
   "type": "module",
