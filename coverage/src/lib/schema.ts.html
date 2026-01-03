@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
@@ -383,7 +383,21 @@
 <a name='L318'></a><a href='#L318'>318</a>
 <a name='L319'></a><a href='#L319'>319</a>
 <a name='L320'></a><a href='#L320'>320</a>
-<a name='L321'></a><a href='#L321'>321</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L321'></a><a href='#L321'>321</a>
+<a name='L322'></a><a href='#L322'>322</a>
+<a name='L323'></a><a href='#L323'>323</a>
+<a name='L324'></a><a href='#L324'>324</a>
+<a name='L325'></a><a href='#L325'>325</a>
+<a name='L326'></a><a href='#L326'>326</a>
+<a name='L327'></a><a href='#L327'>327</a>
+<a name='L328'></a><a href='#L328'>328</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -704,7 +718,14 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import type { RouteConfig } from '@hono/zod-openapi';
-import type { CreateSchemaInterface, NeverWrapper, ResponsesConfig, UniqueTuple, UserDefinedStatusCode } from './types';
+import type {
+  CreateSchemaInterface,
+  MergeRouteResponses,
+  NeverWrapper,
+  ResponsesConfig,
+  UniqueTuple,
+  UserDefinedStatusCode,
+} from './types';
 &nbsp;
 /**
  * The ZodOpenAPISchema class is a utility for creating OpenAPI schema definitions
@@ -713,7 +734,7 @@ import type { CreateSchemaInterface, NeverWrapper, ResponsesConfig, UniqueTuple,
  * @template M - The user-defined status codes type (M extends ResponsesConfig).
  * @extends {ResponsesConfig}
  */
-export class ZodOpenAPISchema&lt;M extends ResponsesConfig&gt; implements CreateSchemaInterface {
+export class ZodOpenAPISchema&lt;M extends ResponsesConfig&gt; implements CreateSchemaInterface&lt;M&gt; {
   /**
    * The private property that holds the user-defined status codes type object (M extends ResponsesConfig).
    *
@@ -856,7 +877,7 @@ export class ZodOpenAPISchema&lt;M extends ResponsesConfig&gt; implements Create
    *
    * @param {R} route - Route config (R extends RouteConfig). This type is provided by @hono/zod-openapi.
    * @param {Readonly&lt;UserDefinedStatusCode&lt;M&gt;[]&gt;} statusCodes - Optional array of unique status codes (only user-defined ones) to be added to the route.
-   * @returns {R} - The route config type (R extends RouteConfig) with the specified status codes added to the responses. This type is provided by @hono/zod-openapi.
+   * @returns {MergeRouteResponses&lt;R, M, T&gt;} - The route config type (R extends RouteConfig) with the specified status codes added to the responses. This type is provided by @hono/zod-openapi.
    *
    * @example
    * ```ts
@@ -919,10 +940,10 @@ export class ZodOpenAPISchema&lt;M extends ResponsesConfig&gt; implements Create
    * );
    * ```
    */
-  createSchema&lt;R extends RouteConfig, T extends Readonly&lt;UserDefinedStatusCode&lt;M&gt;[]&gt;&gt;(
+  createSchema&lt;R extends RouteConfig, const T extends Readonly&lt;UserDefinedStatusCode&lt;M&gt;[]&gt;&gt;(
     route: R,
     statusCodes: NeverWrapper&lt;UserDefinedStatusCode&lt;M&gt;, T&gt;
-  ): R;
+  ): MergeRouteResponses&lt;R, M, T&gt;;
 &nbsp;
   /**
    * Create a new RouteConfig type object by adding specified status codes to the responses of the given route.
@@ -933,8 +954,8 @@ export class ZodOpenAPISchema&lt;M extends ResponsesConfig&gt; implements Create
    * @extends {Readonly&lt;UserDefinedStatusCode&lt;M&gt;[]&gt;}
    *
    * @param {R} route - Route config (R extends RouteConfig). This type is provided by @hono/zod-openapi.
-   * @param {Readonly&lt;UserDefinedStatusCode&lt;M&gt;[]&gt;} statusCodes - Optional array of unique status codes (only user-defined ones) to be added to the route.
-   * @returns {R} - The route config type (R extends RouteConfig) with the specified status codes added to the responses. This type is provided by @hono/zod-openapi.
+   * @param {NeverWrapper&lt;UserDefinedStatusCode&lt;M&gt;, T&gt;} statusCodes - Optional array of unique status codes (only user-defined ones) to be added to the route.
+   * @returns {MergeRouteResponses&lt;R, M, T&gt;} - The route config type (R extends RouteConfig) with the specified status codes added to the responses. This type is provided by @hono/zod-openapi.
    *
    * @example
    * ```ts
@@ -996,18 +1017,18 @@ export class ZodOpenAPISchema&lt;M extends ResponsesConfig&gt; implements Create
    * );
    * ```
    */
-  createSchema&lt;R extends RouteConfig, T extends Readonly&lt;UserDefinedStatusCode&lt;M&gt;[]&gt;&gt;(
+  createSchema&lt;R extends RouteConfig, const T extends Readonly&lt;UserDefinedStatusCode&lt;M&gt;[]&gt;&gt;(
     route: R,
     statusCodes?: UniqueTuple&lt;UserDefinedStatusCode&lt;M&gt;, T&gt;
-  ): R {
-    if (statusCodes) {
-      const extraResponses: ResponsesConfig = {};
+  ): R | MergeRouteResponses&lt;R, M, T&gt; {
+    if (statusCodes !== undefined) {
+      const extraResponses: Partial&lt;Pick&lt;M, T[number]&gt;&gt; = {};
       // Collect responses for the specified status codes
       for (const statusCode of statusCodes) {
         const response = this.responses[statusCode];
         // Add only status codes that are defined by the user.
         if (response) {
-          extraResponses[statusCode] = response;
+          extraResponses[statusCode as T[number]] = response;
         }
       }
 &nbsp;
@@ -1015,9 +1036,9 @@ export class ZodOpenAPISchema&lt;M extends ResponsesConfig&gt; implements Create
         ...route,
         responses: {
           ...extraResponses,
-          ...route.responses,
+          ...(route.<span class="branch-0 cbranch-no" title="branch not covered" >responses ?? {}),</span>
         },
-      } as R;
+      } as any;
     }
     // When no status codes are provided, return the route as is.
     return route;
@@ -1030,7 +1051,7 @@ export class ZodOpenAPISchema&lt;M extends ResponsesConfig&gt; implements Create
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-12-31T14:03:23.383Z
+                at 2026-01-03T14:39:23.977Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
