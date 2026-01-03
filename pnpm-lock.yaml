@@ -6,9 +6,6 @@ settings:
 
 catalogs:
   default:
-    '@hono/zod-openapi':
-      specifier: ^1.1.4
-      version: 1.1.6
     hono:
       specifier: ^4.10.3
       version: 4.10.6
@@ -25,6 +22,9 @@ catalogs:
     '@scalar/hono-api-reference':
       specifier: ^0.9.22
       version: 0.9.30
+    '@types/node':
+      specifier: ^20.19.19
+      version: 20.19.27
     wrangler:
       specifier: ^4.45.0
       version: 4.42.0
@@ -57,7 +57,7 @@ importers:
         version: 1.19.7(hono@4.10.6)
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.1.6(hono@4.10.6)(zod@4.1.12)
+        version: 1.2.0(hono@4.10.6)(zod@4.1.12)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
         version: 0.9.30(hono@4.10.6)
@@ -99,7 +99,7 @@ importers:
     dependencies:
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.1.6(hono@4.10.6)(zod@4.1.12)
+        version: 1.2.0(hono@4.10.6)(zod@4.1.12)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
         version: 0.9.30(hono@4.10.6)
@@ -121,7 +121,7 @@ importers:
         version: 1.19.7(hono@4.10.6)
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.1.6(hono@4.10.6)(zod@4.1.12)
+        version: 1.2.0(hono@4.10.6)(zod@4.1.12)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
         version: 0.9.30(hono@4.10.6)
@@ -146,7 +146,7 @@ importers:
     dependencies:
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.1.6(hono@4.10.6)(zod@4.1.12)
+        version: 1.2.0(hono@4.10.6)(zod@4.1.12)
       hono:
         specifier: 'catalog:'
         version: 4.10.6
@@ -885,8 +885,8 @@ packages:
     peerDependencies:
       hono: ^4
 
-  '@hono/zod-openapi@1.1.6':
-    resolution: {integrity: sha512-wEdG1MlCWAnngRVPKZJ/dv5P/b5UL3di/+SLX0Cuuc8hJ6Gf8L3vDMXcXywSYAwxK8iiatF7HoTxJ96gtckLpQ==}
+  '@hono/zod-openapi@1.2.0':
+    resolution: {integrity: sha512-KDfHqv/Wy4elVseZXgokbHxeWuqBL+AZfqsOMpEihBMUsk/fJ+bLIi3Sf70JFVpt1Ihui8RasYrInozt7ZBDIA==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       hono: '>=4.3.6'
@@ -2521,7 +2521,7 @@ snapshots:
     dependencies:
       hono: 4.10.6
 
-  '@hono/zod-openapi@1.1.6(hono@4.10.6)(zod@4.1.12)':
+  '@hono/zod-openapi@1.2.0(hono@4.10.6)(zod@4.1.12)':
     dependencies:
       '@asteasolutions/zod-to-openapi': 8.2.0(zod@4.1.12)
       '@hono/zod-validator': 0.7.6(hono@4.10.6)(zod@4.1.12)
