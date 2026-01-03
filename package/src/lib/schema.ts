@@ -1,5 +1,12 @@
 import type { RouteConfig } from '@hono/zod-openapi';
-import type { CreateSchemaInterface, NeverWrapper, ResponsesConfig, UniqueTuple, UserDefinedStatusCode } from './types';
+import type {
+  CreateSchemaInterface,
+  MergeRouteResponses,
+  NeverWrapper,
+  ResponsesConfig,
+  UniqueTuple,
+  UserDefinedStatusCode,
+} from './types';
 
 /**
  * The ZodOpenAPISchema class is a utility for creating OpenAPI schema definitions
@@ -8,7 +15,7 @@ import type { CreateSchemaInterface, NeverWrapper, ResponsesConfig, UniqueTuple,
  * @template M - The user-defined status codes type (M extends ResponsesConfig).
  * @extends {ResponsesConfig}
  */
-export class ZodOpenAPISchema<M extends ResponsesConfig> implements CreateSchemaInterface {
+export class ZodOpenAPISchema<M extends ResponsesConfig> implements CreateSchemaInterface<M> {
   /**
    * The private property that holds the user-defined status codes type object (M extends ResponsesConfig).
    *
@@ -151,7 +158,7 @@ export class ZodOpenAPISchema<M extends ResponsesConfig> implements CreateSchema
    *
    * @param {R} route - Route config (R extends RouteConfig). This type is provided by @hono/zod-openapi.
    * @param {Readonly<UserDefinedStatusCode<M>[]>} statusCodes - Optional array of unique status codes (only user-defined ones) to be added to the route.
-   * @returns {R} - The route config type (R extends RouteConfig) with the specified status codes added to the responses. This type is provided by @hono/zod-openapi.
+   * @returns {MergeRouteResponses<R, M, T>} - The route config type (R extends RouteConfig) with the specified status codes added to the responses. This type is provided by @hono/zod-openapi.
    *
    * @example
    * ```ts
@@ -214,10 +221,10 @@ export class ZodOpenAPISchema<M extends ResponsesConfig> implements CreateSchema
    * );
    * ```
    */
-  createSchema<R extends RouteConfig, T extends Readonly<UserDefinedStatusCode<M>[]>>(
+  createSchema<R extends RouteConfig, const T extends Readonly<UserDefinedStatusCode<M>[]>>(
     route: R,
     statusCodes: NeverWrapper<UserDefinedStatusCode<M>, T>
-  ): R;
+  ): MergeRouteResponses<R, M, T>;
 
   /**
    * Create a new RouteConfig type object by adding specified status codes to the responses of the given route.
@@ -228,8 +235,8 @@ export class ZodOpenAPISchema<M extends ResponsesConfig> implements CreateSchema
    * @extends {Readonly<UserDefinedStatusCode<M>[]>}
    *
    * @param {R} route - Route config (R extends RouteConfig). This type is provided by @hono/zod-openapi.
-   * @param {Readonly<UserDefinedStatusCode<M>[]>} statusCodes - Optional array of unique status codes (only user-defined ones) to be added to the route.
-   * @returns {R} - The route config type (R extends RouteConfig) with the specified status codes added to the responses. This type is provided by @hono/zod-openapi.
+   * @param {NeverWrapper<UserDefinedStatusCode<M>, T>} statusCodes - Optional array of unique status codes (only user-defined ones) to be added to the route.
+   * @returns {MergeRouteResponses<R, M, T>} - The route config type (R extends RouteConfig) with the specified status codes added to the responses. This type is provided by @hono/zod-openapi.
    *
    * @example
    * ```ts
@@ -291,18 +298,18 @@ export class ZodOpenAPISchema<M extends ResponsesConfig> implements CreateSchema
    * );
    * ```
    */
-  createSchema<R extends RouteConfig, T extends Readonly<UserDefinedStatusCode<M>[]>>(
+  createSchema<R extends RouteConfig, const T extends Readonly<UserDefinedStatusCode<M>[]>>(
     route: R,
     statusCodes?: UniqueTuple<UserDefinedStatusCode<M>, T>
-  ): R {
-    if (statusCodes) {
-      const extraResponses: ResponsesConfig = {};
+  ): R | MergeRouteResponses<R, M, T> {
+    if (statusCodes !== undefined) {
+      const extraResponses: Partial<Pick<M, T[number]>> = {};
       // Collect responses for the specified status codes
       for (const statusCode of statusCodes) {
         const response = this.responses[statusCode];
         // Add only status codes that are defined by the user.
         if (response) {
-          extraResponses[statusCode] = response;
+          extraResponses[statusCode as T[number]] = response;
         }
       }
 
@@ -310,9 +317,9 @@ export class ZodOpenAPISchema<M extends ResponsesConfig> implements CreateSchema
         ...route,
         responses: {
           ...extraResponses,
-          ...route.responses,
+          ...(route.responses ?? {}),
         },
-      } as R;
+      } as any;
     }
     // When no status codes are provided, return the route as is.
     return route;

@@ -86,9 +86,13 @@ export type UserDefinedStatusCode<M extends ResponsesConfig> = Extract<StatusCod
  * If there are no duplicates, it returns an empty tuple.
  *
  * @template Elm - The type of elements in the tuple (Elm extends UserDefinedStatusCode<ResponsesConfig>).
+ * @extends {UserDefinedStatusCode<ResponsesConfig>}
  * @template Arr - The tuple type to check for duplicates (Arr extends Readonly<Elm[]>).
+ * @extends {Readonly<Elm[]>}
  * @template Seen - The tuple type that keeps track of seen elements (default is an empty tuple).
+ * @extends {Readonly<Elm[]>}
  * @template Duplication - The tuple type that accumulates duplicate elements (default is an empty tuple).
+ * @extends {Readonly<Elm[]>}
  */
 export type DuplicateStatusCode<
   Elm extends UserDefinedStatusCode<ResponsesConfig>,
@@ -106,8 +110,11 @@ export type DuplicateStatusCode<
  * If duplicates are found, it returns `never`; otherwise, it returns `Arr`.
  *
  * @template Elm - The type of elements in the tuple (Elm extends UserDefinedStatusCode<ResponsesConfig>).
+ * @extends {UserDefinedStatusCode<ResponsesConfig>}
  * @template Arr - The tuple type to check for uniqueness (Arr extends Readonly<Elm[]>).
+ * @extends {Readonly<Elm[]>}
  * @template Seen - The tuple type that keeps track of seen elements (default is an empty tuple).
+ * @extends {Readonly<Elm[]>}
  */
 export type UniqueTuple<
   Elm extends UserDefinedStatusCode<ResponsesConfig>,
@@ -123,7 +130,9 @@ export type UniqueTuple<
  * The type that if Elm satisfies `Elm extends never`, it returns zod-openapi-share defined error type (`{ __error: 'Status codes have to be unique.'; __duplicate_status_codes: DuplicateStatusCode<Elm, T>;}`); otherwise, it returns `Arr`.
  *
  * @template Elm - The type of elements in the tuple (Elm extends UserDefinedStatusCode<ResponsesConfig>).
+ * @extends {UserDefinedStatusCode<ResponsesConfig>}
  * @template T - The tuple type to check for uniqueness (T extends Readonly<Elm[]>).
+ * @extends {Readonly<Elm[]>}
  */
 export type NeverWrapper<Elm extends UserDefinedStatusCode<ResponsesConfig>, T extends Readonly<Elm[]>> = UniqueTuple<
   Elm,
@@ -136,11 +145,38 @@ export type NeverWrapper<Elm extends UserDefinedStatusCode<ResponsesConfig>, T e
   : UniqueTuple<Elm, T>;
 
 /**
- * The interface that defines the methods of createOpenAPISchema class.
+ * The type that merges the `responses` property of a route config with user-defined status codes.
+ *
+ * @template R - The route config type (R extends RouteConfig).
+ * @extends {RouteConfig}
+ * @template M - The user-defined status codes type (M extends ResponsesConfig).
+ * @extends {ResponsesConfig}
+ * @template T - The tuple type of user-defined status codes (T extends Readonly<UserDefinedStatusCode<M>[]>).
+ * @extends {Readonly<UserDefinedStatusCode<M>[]>}
  */
-export type CreateSchemaInterface = {
-  createSchema<M extends ResponsesConfig, R extends RouteConfig, T extends Readonly<UserDefinedStatusCode<M>[]>>(
+export type MergeRouteResponses<
+  R extends RouteConfig,
+  M extends ResponsesConfig,
+  T extends Readonly<UserDefinedStatusCode<M>[]>
+> = Omit<R, 'responses'> & {
+  responses: NonNullable<R['responses']> & Pick<M, T[number]>;
+};
+
+/**
+ * The interface that defines the methods of createOpenAPISchema class.
+ *
+ * @template M - The user-defined status codes type (M extends ResponsesConfig).
+ * @extends {ResponsesConfig}
+ *
+ * @template T - The tuple type of user-defined status codes (T extends Readonly<UserDefinedStatusCode<M>[]>).
+ * @extends {Readonly<UserDefinedStatusCode<M>[]>}
+ */
+export type CreateSchemaInterface<M extends ResponsesConfig> = {
+  // `statusCodes` argument not included
+  createSchema<R extends RouteConfig>(route: R): R;
+  // `statusCodes` argument included
+  createSchema<R extends RouteConfig, const T extends Readonly<UserDefinedStatusCode<M>[]>>(
     route: R,
-    statusCodes?: UniqueTuple<UserDefinedStatusCode<M>, T>
-  ): R;
+    statusCodes: NeverWrapper<UserDefinedStatusCode<M>, T>
+  ): MergeRouteResponses<R, M, T>;
 };
