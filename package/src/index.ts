@@ -6,6 +6,7 @@ export type {
   UserDefinedStatusCode,
   UniqueTuple,
   NeverWrapper,
+  MergeRouteResponses,
   CreateSchemaInterface,
 } from './lib/types.js';
 
