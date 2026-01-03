@@ -60,7 +60,7 @@ describe('createSchema method test', () => {
           },
         },
       },
-      [400, 500]
+      [400, 500] as const
     );
 
     const currentSchema = createRoute({
