@@ -19,12 +19,12 @@ catalogs:
       specifier: ^5.9.3
       version: 5.9.3
   examples:
-    '@hono/node-server':
-      specifier: ^1.19.5
-      version: 1.19.7
     '@scalar/hono-api-reference':
       specifier: ^0.9.22
       version: 0.9.30
+    '@types/node':
+      specifier: ^20.19.19
+      version: 20.19.27
     wrangler:
       specifier: ^4.45.0
       version: 4.42.0
@@ -54,7 +54,7 @@ importers:
     devDependencies:
       '@hono/node-server':
         specifier: catalog:examples
-        version: 1.19.7(hono@4.10.6)
+        version: 1.19.9(hono@4.10.6)
       '@hono/zod-openapi':
         specifier: 'catalog:'
         version: 1.1.6(hono@4.10.6)(zod@4.1.12)
@@ -118,7 +118,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: catalog:examples
-        version: 1.19.7(hono@4.10.6)
+        version: 1.19.9(hono@4.10.6)
       '@hono/zod-openapi':
         specifier: 'catalog:'
         version: 1.1.6(hono@4.10.6)(zod@4.1.12)
@@ -879,8 +879,8 @@ packages:
   '@gerrit0/mini-shiki@3.15.0':
     resolution: {integrity: sha512-L5IHdZIDa4bG4yJaOzfasOH/o22MCesY0mx+n6VATbaiCtMeR59pdRqYk4bEiQkIHfxsHPNgdi7VJlZb2FhdMQ==}
 
-  '@hono/node-server@1.19.7':
-    resolution: {integrity: sha512-vUcD0uauS7EU2caukW8z5lJKtoGMokxNbJtBiwHgpqxEXokaHCBkQUmCHhjFB1VUTWdqj25QoMkMKzgjq+uhrw==}
+  '@hono/node-server@1.19.9':
+    resolution: {integrity: sha512-vHL6w3ecZsky+8P5MD+eFfaGTyCeOHUIFYMGpQGbrBTSmNNoxv0if69rEZ5giu36weC5saFuznL411gRX7bJDw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
@@ -2517,7 +2517,7 @@ snapshots:
       '@shikijs/types': 3.15.0
       '@shikijs/vscode-textmate': 10.0.2
 
-  '@hono/node-server@1.19.7(hono@4.10.6)':
+  '@hono/node-server@1.19.9(hono@4.10.6)':
     dependencies:
       hono: 4.10.6
 
