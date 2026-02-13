@@ -6,9 +6,9 @@ settings:
 
 catalogs:
   default:
-    '@hono/zod-openapi':
-      specifier: ^1.1.4
-      version: 1.2.0
+    hono:
+      specifier: ^4.10.3
+      version: 4.11.4
     tsx:
       specifier: ^4.20.6
       version: 4.20.6
@@ -57,7 +57,7 @@ importers:
         version: 1.19.9(hono@4.11.4)
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.2.0(hono@4.11.4)(zod@4.1.12)
+        version: 1.2.1(hono@4.11.4)(zod@4.1.12)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
         version: 0.9.34(hono@4.11.4)
@@ -99,7 +99,7 @@ importers:
     dependencies:
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.2.0(hono@4.11.4)(zod@4.1.12)
+        version: 1.2.1(hono@4.11.4)(zod@4.1.12)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
         version: 0.9.34(hono@4.11.4)
@@ -121,7 +121,7 @@ importers:
         version: 1.19.9(hono@4.11.4)
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.2.0(hono@4.11.4)(zod@4.1.12)
+        version: 1.2.1(hono@4.11.4)(zod@4.1.12)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
         version: 0.9.34(hono@4.11.4)
@@ -146,7 +146,7 @@ importers:
     dependencies:
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.2.0(hono@4.11.4)(zod@4.1.12)
+        version: 1.2.1(hono@4.11.4)(zod@4.1.12)
       hono:
         specifier: 'catalog:'
         version: 4.11.4
@@ -885,8 +885,8 @@ packages:
     peerDependencies:
       hono: ^4
 
-  '@hono/zod-openapi@1.2.0':
-    resolution: {integrity: sha512-KDfHqv/Wy4elVseZXgokbHxeWuqBL+AZfqsOMpEihBMUsk/fJ+bLIi3Sf70JFVpt1Ihui8RasYrInozt7ZBDIA==}
+  '@hono/zod-openapi@1.2.1':
+    resolution: {integrity: sha512-aZza4V8wkqpdHBWFNPiCeWd0cGOXbYuQW9AyezHs/jwQm5p67GkUyXwfthAooAwnG7thTpvOJkThZpCoY6us8w==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       hono: '>=4.3.6'
@@ -1582,6 +1582,7 @@ packages:
 
   glob@10.5.0:
     resolution: {integrity: sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   has-flag@4.0.0:
@@ -2519,7 +2520,7 @@ snapshots:
     dependencies:
       hono: 4.11.4
 
-  '@hono/zod-openapi@1.2.0(hono@4.11.4)(zod@4.1.12)':
+  '@hono/zod-openapi@1.2.1(hono@4.11.4)(zod@4.1.12)':
     dependencies:
       '@asteasolutions/zod-to-openapi': 8.4.0(zod@4.1.12)
       '@hono/zod-validator': 0.7.6(hono@4.11.4)(zod@4.1.12)
