@@ -6,6 +6,9 @@ settings:
 
 catalogs:
   default:
+    '@hono/zod-openapi':
+      specifier: ^1.1.4
+      version: 1.2.1
     hono:
       specifier: ^4.10.3
       version: 4.11.4
@@ -19,9 +22,6 @@ catalogs:
     '@hono/node-server':
       specifier: ^1.19.5
       version: 1.19.9
-    '@scalar/hono-api-reference':
-      specifier: ^0.9.22
-      version: 0.9.34
     '@types/node':
       specifier: ^20.19.19
       version: 20.19.27
@@ -60,7 +60,7 @@ importers:
         version: 1.2.1(hono@4.11.4)(zod@4.1.12)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
-        version: 0.9.34(hono@4.11.4)
+        version: 0.9.40(hono@4.11.4)
       '@types/node':
         specifier: catalog:examples
         version: 20.19.27
@@ -102,7 +102,7 @@ importers:
         version: 1.2.1(hono@4.11.4)(zod@4.1.12)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
-        version: 0.9.34(hono@4.11.4)
+        version: 0.9.40(hono@4.11.4)
       hono:
         specifier: 'catalog:'
         version: 4.11.4
@@ -124,7 +124,7 @@ importers:
         version: 1.2.1(hono@4.11.4)(zod@4.1.12)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
-        version: 0.9.34(hono@4.11.4)
+        version: 0.9.40(hono@4.11.4)
       hono:
         specifier: 'catalog:'
         version: 4.11.4
@@ -1263,22 +1263,22 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@scalar/core@0.3.32':
-    resolution: {integrity: sha512-5qUC2l1fhLyKw1iKAbuQCWb2TNZ4Y52MDc7MA7RA7QLdJ0QPBzk2UAJ0ZuYY2dIhZ3qTcpuqtF4EXEllXHoNOA==}
+  '@scalar/core@0.3.37':
+    resolution: {integrity: sha512-cQWMHsGD9jCiYHi91acR3tOsj+qGk+dRQ2W+N5+au1NZ/GkUNT5TUEufekn/sj1S8af+lOnn3y0xXoTI34jCog==}
     engines: {node: '>=20'}
 
-  '@scalar/helpers@0.2.8':
-    resolution: {integrity: sha512-aXXRF4sCaiGZIRpZ1MUcnl8y0Q9pPG1VXqQMWacVWDh6zQN9cuayTC/TbODzWeldp50sgJ1E8MpHvpeV7CEF9g==}
+  '@scalar/helpers@0.2.11':
+    resolution: {integrity: sha512-Y7DLt1bIZF9dvHzJwSJTcC1lpSr1Tbf4VBhHOCRIHu23Rr7/lhQnddRxFmPV1tZXwEQKz7F7yRrubwCfKPCucw==}
     engines: {node: '>=20'}
 
-  '@scalar/hono-api-reference@0.9.34':
-    resolution: {integrity: sha512-UNvyIlESDBws9ofAfO2R5v6qX4vp5rks1dY3n1SoOgxmDj4O+0k/oO7c6vFDyaDBjXokBMbW1V13mNYdkIaINQ==}
+  '@scalar/hono-api-reference@0.9.40':
+    resolution: {integrity: sha512-0tQOxyEwuu1QGcoA5aCJg2eSmNfF35mxeGx13TND9ud5ZBeuOqli8jyfykgkqV3gFTnDDlQYgQcOvB6Rgk2beA==}
     engines: {node: '>=20'}
     peerDependencies:
-      hono: ^4.10.3
+      hono: ^4.11.5
 
-  '@scalar/types@0.5.8':
-    resolution: {integrity: sha512-eL8zojDI9QB+kNRkuM80auTKHnzNrlOLC8ZLUJVnY0Jj5ZtoInKMDGodgQXK1wOSDTcfVfgLALOY1zb6cFFlCg==}
+  '@scalar/types@0.6.2':
+    resolution: {integrity: sha512-VWfY/z9R5NT8PpKVmvmIj6QSh56MMcl8x3JsGiNxR+w7txGQEq+QzEl35aU56uSBFmLfPk1oyInoaHhkosKooA==}
     engines: {node: '>=20'}
 
   '@shikijs/engine-oniguruma@3.21.0':
@@ -1965,8 +1965,8 @@ packages:
     engines: {node: '>=18.0.0'}
     hasBin: true
 
-  type-fest@5.4.1:
-    resolution: {integrity: sha512-xygQcmneDyzsEuKZrFbRMne5HDqMs++aFzefrJTgEIKjQ3rekM+RPfFCVq2Gp1VIDqddoYeppCj4Pcb+RZW0GQ==}
+  type-fest@5.4.4:
+    resolution: {integrity: sha512-JnTrzGu+zPV3aXIUhnyWJj4z/wigMsdYajGLIYakqyOW1nPllzXEJee0QQbHj+CTIQtXGlAjuK0UY+2xTyjVAw==}
     engines: {node: '>=20'}
 
   typedoc@0.28.16:
@@ -2135,8 +2135,8 @@ packages:
   zod@4.1.12:
     resolution: {integrity: sha512-JInaHOamG8pt5+Ey8kGmdcAcg3OL9reK8ltczgHTAwNhMys/6ThXHityHxVV2p3fkw/c+MAvBHFVYHFZDmjMCQ==}
 
-  zod@4.3.5:
-    resolution: {integrity: sha512-k7Nwx6vuWx1IJ9Bjuf4Zt1PEllcwe7cls3VNzm4CQ1/hgtFUK2bRNG3rvnpPUhFjmqJKAKtjV576KnUkHocg/g==}
+  zod@4.3.6:
+    resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
 
 snapshots:
 
@@ -2787,23 +2787,23 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.53.3':
     optional: true
 
-  '@scalar/core@0.3.32':
+  '@scalar/core@0.3.37':
     dependencies:
-      '@scalar/types': 0.5.8
+      '@scalar/types': 0.6.2
 
-  '@scalar/helpers@0.2.8': {}
+  '@scalar/helpers@0.2.11': {}
 
-  '@scalar/hono-api-reference@0.9.34(hono@4.11.4)':
+  '@scalar/hono-api-reference@0.9.40(hono@4.11.4)':
     dependencies:
-      '@scalar/core': 0.3.32
+      '@scalar/core': 0.3.37
       hono: 4.11.4
 
-  '@scalar/types@0.5.8':
+  '@scalar/types@0.6.2':
     dependencies:
-      '@scalar/helpers': 0.2.8
+      '@scalar/helpers': 0.2.11
       nanoid: 5.1.6
-      type-fest: 5.4.1
-      zod: 4.3.5
+      type-fest: 5.4.4
+      zod: 4.3.6
 
   '@shikijs/engine-oniguruma@3.21.0':
     dependencies:
@@ -3615,7 +3615,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  type-fest@5.4.1:
+  type-fest@5.4.4:
     dependencies:
       tagged-tag: 1.0.0
 
@@ -3869,4 +3869,4 @@ snapshots:
 
   zod@4.1.12: {}
 
-  zod@4.3.5: {}
+  zod@4.3.6: {}
