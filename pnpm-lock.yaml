@@ -6,9 +6,9 @@ settings:
 
 catalogs:
   default:
-    hono:
-      specifier: ^4.10.3
-      version: 4.11.4
+    '@hono/zod-openapi':
+      specifier: ^1.1.4
+      version: 1.2.3
     tsx:
       specifier: ^4.20.6
       version: 4.21.0
@@ -25,6 +25,9 @@ catalogs:
     '@types/node':
       specifier: ^20.19.19
       version: 20.19.33
+    wrangler:
+      specifier: ^4.45.0
+      version: 4.76.0
   package:
     '@vitest/coverage-v8':
       specifier: ^4.0.3
@@ -35,6 +38,9 @@ catalogs:
     tsup:
       specifier: ^8.5.0
       version: 8.5.1
+    typedoc:
+      specifier: ^0.28.14
+      version: 0.28.17
     vitest:
       specifier: ^4.0.3
       version: 3.2.4
@@ -48,13 +54,13 @@ importers:
     devDependencies:
       '@hono/node-server':
         specifier: catalog:examples
-        version: 1.19.11(hono@4.11.4)
+        version: 1.19.11(hono@4.12.8)
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.2.3(hono@4.11.4)(zod@4.3.6)
+        version: 1.2.3(hono@4.12.8)(zod@4.3.6)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
-        version: 0.10.4(hono@4.11.4)
+        version: 0.10.4(hono@4.12.8)
       '@types/node':
         specifier: catalog:examples
         version: 20.19.33
@@ -66,7 +72,7 @@ importers:
         version: 3.2.4(vitest@3.2.4)
       hono:
         specifier: 'catalog:'
-        version: 4.11.4
+        version: 4.12.8
       tsup:
         specifier: catalog:package
         version: 8.5.1(postcss@8.5.6)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.3)
@@ -93,13 +99,13 @@ importers:
     dependencies:
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.2.3(hono@4.11.4)(zod@4.3.6)
+        version: 1.2.3(hono@4.12.8)(zod@4.3.6)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
-        version: 0.10.4(hono@4.11.4)
+        version: 0.10.4(hono@4.12.8)
       hono:
         specifier: 'catalog:'
-        version: 4.11.4
+        version: 4.12.8
       zod-openapi-share:
         specifier: workspace:*
         version: link:../../package
@@ -112,16 +118,16 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: catalog:examples
-        version: 1.19.11(hono@4.11.4)
+        version: 1.19.11(hono@4.12.8)
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.2.3(hono@4.11.4)(zod@4.3.6)
+        version: 1.2.3(hono@4.12.8)(zod@4.3.6)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
-        version: 0.10.4(hono@4.11.4)
+        version: 0.10.4(hono@4.12.8)
       hono:
         specifier: 'catalog:'
-        version: 4.11.4
+        version: 4.12.8
       zod-openapi-share:
         specifier: workspace:*
         version: link:../../package
@@ -140,10 +146,10 @@ importers:
     dependencies:
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.2.3(hono@4.11.4)(zod@4.3.6)
+        version: 1.2.3(hono@4.12.8)(zod@4.3.6)
       hono:
         specifier: 'catalog:'
-        version: 4.11.4
+        version: 4.12.8
     devDependencies:
       '@vitest/coverage-v8':
         specifier: catalog:package
@@ -1592,8 +1598,8 @@ packages:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
 
-  hono@4.11.4:
-    resolution: {integrity: sha512-U7tt8JsyrxSRKspfhtLET79pU8K+tInj5QZXs1jSugO1Vq5dFj3kmZsRldo29mTBfcjDRVRXrEZ6LS63Cog9ZA==}
+  hono@4.12.8:
+    resolution: {integrity: sha512-VJCEvtrezO1IAR+kqEYnxUOoStaQPGrCmX3j4wDTNOcD1uRPFpGlwQUIW8niPuvHXaTUxeOUl5MMDGrl+tmO9A==}
     engines: {node: '>=16.9.0'}
 
   html-escaper@2.0.2:
@@ -2112,11 +2118,6 @@ packages:
       utf-8-validate:
         optional: true
 
-  yaml@2.8.2:
-    resolution: {integrity: sha512-mplynKqc1C2hTVYxd0PU2xQAc22TI1vShAYGksCCfxbn/dFwnHTNi1bvYsBTkhdUNtGIf5xNOg938rrSSYvS9A==}
-    engines: {node: '>= 14.6'}
-    hasBin: true
-
   yaml@2.8.3:
     resolution: {integrity: sha512-AvbaCLOO2Otw/lW5bmh9d/WEdcDFdQp2Z2ZUH3pX9U2ihyUY0nvLv7J6TrWowklRGPYbB/IuIMfYgxaCPg5Bpg==}
     engines: {node: '>= 14.6'}
@@ -2510,21 +2511,21 @@ snapshots:
       '@shikijs/types': 3.23.0
       '@shikijs/vscode-textmate': 10.0.2
 
-  '@hono/node-server@1.19.11(hono@4.11.4)':
+  '@hono/node-server@1.19.11(hono@4.12.8)':
     dependencies:
-      hono: 4.11.4
+      hono: 4.12.8
 
-  '@hono/zod-openapi@1.2.3(hono@4.11.4)(zod@4.3.6)':
+  '@hono/zod-openapi@1.2.3(hono@4.12.8)(zod@4.3.6)':
     dependencies:
       '@asteasolutions/zod-to-openapi': 8.5.0(zod@4.3.6)
-      '@hono/zod-validator': 0.7.6(hono@4.11.4)(zod@4.3.6)
-      hono: 4.11.4
+      '@hono/zod-validator': 0.7.6(hono@4.12.8)(zod@4.3.6)
+      hono: 4.12.8
       openapi3-ts: 4.5.0
       zod: 4.3.6
 
-  '@hono/zod-validator@0.7.6(hono@4.11.4)(zod@4.3.6)':
+  '@hono/zod-validator@0.7.6(hono@4.12.8)(zod@4.3.6)':
     dependencies:
-      hono: 4.11.4
+      hono: 4.12.8
       zod: 4.3.6
 
   '@img/colour@1.1.0': {}
@@ -2808,10 +2809,10 @@ snapshots:
 
   '@scalar/helpers@0.4.2': {}
 
-  '@scalar/hono-api-reference@0.10.4(hono@4.11.4)':
+  '@scalar/hono-api-reference@0.10.4(hono@4.12.8)':
     dependencies:
       '@scalar/core': 0.4.4
-      hono: 4.11.4
+      hono: 4.12.8
 
   '@scalar/types@0.7.4':
     dependencies:
@@ -3192,7 +3193,7 @@ snapshots:
 
   has-flag@4.0.0: {}
 
-  hono@4.11.4: {}
+  hono@4.12.8: {}
 
   html-escaper@2.0.2: {}
 
@@ -3832,8 +3833,6 @@ snapshots:
       strip-ansi: 7.1.2
 
   ws@8.18.0: {}
-
-  yaml@2.8.2: {}
 
   yaml@2.8.3: {}
 
