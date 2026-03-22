@@ -65,7 +65,7 @@ export const api = () => {
    * Add route to app instance
    */
   app.openapi(rootRoute, (c) => {
-    return c.json({ result: 'Hello World!' });
+    return c.json({ result: 'Hello World!' }, 200);
   });
 
   return app;
