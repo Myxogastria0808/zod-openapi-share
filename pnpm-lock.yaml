@@ -9,9 +9,6 @@ catalogs:
     '@hono/zod-openapi':
       specifier: ^1.1.4
       version: 1.2.3
-    hono:
-      specifier: ^4.10.3
-      version: 4.12.8
     tsx:
       specifier: ^4.20.6
       version: 4.21.0
@@ -19,6 +16,9 @@ catalogs:
       specifier: ^5.9.3
       version: 5.9.3
   examples:
+    '@hono/node-server':
+      specifier: ^1.19.5
+      version: 1.19.14
     '@scalar/hono-api-reference':
       specifier: ^0.10.0
       version: 0.10.4
@@ -54,13 +54,13 @@ importers:
     devDependencies:
       '@hono/node-server':
         specifier: catalog:examples
-        version: 1.19.14(hono@4.12.8)
+        version: 1.19.14(hono@4.12.14)
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.2.3(hono@4.12.8)(zod@4.3.6)
+        version: 1.2.3(hono@4.12.14)(zod@4.3.6)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
-        version: 0.10.4(hono@4.12.8)
+        version: 0.10.4(hono@4.12.14)
       '@types/node':
         specifier: catalog:examples
         version: 20.19.33
@@ -72,7 +72,7 @@ importers:
         version: 3.2.4(vitest@3.2.4)
       hono:
         specifier: 'catalog:'
-        version: 4.12.8
+        version: 4.12.14
       tsup:
         specifier: catalog:package
         version: 8.5.1(postcss@8.5.6)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.3)
@@ -99,13 +99,13 @@ importers:
     dependencies:
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.2.3(hono@4.12.8)(zod@4.3.6)
+        version: 1.2.3(hono@4.12.14)(zod@4.3.6)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
-        version: 0.10.4(hono@4.12.8)
+        version: 0.10.4(hono@4.12.14)
       hono:
         specifier: 'catalog:'
-        version: 4.12.8
+        version: 4.12.14
       zod-openapi-share:
         specifier: workspace:*
         version: link:../../package
@@ -118,16 +118,16 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: catalog:examples
-        version: 1.19.14(hono@4.12.8)
+        version: 1.19.14(hono@4.12.14)
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.2.3(hono@4.12.8)(zod@4.3.6)
+        version: 1.2.3(hono@4.12.14)(zod@4.3.6)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
-        version: 0.10.4(hono@4.12.8)
+        version: 0.10.4(hono@4.12.14)
       hono:
         specifier: 'catalog:'
-        version: 4.12.8
+        version: 4.12.14
       zod-openapi-share:
         specifier: workspace:*
         version: link:../../package
@@ -146,10 +146,10 @@ importers:
     dependencies:
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.2.3(hono@4.12.8)(zod@4.3.6)
+        version: 1.2.3(hono@4.12.14)(zod@4.3.6)
       hono:
         specifier: 'catalog:'
-        version: 4.12.8
+        version: 4.12.14
     devDependencies:
       '@vitest/coverage-v8':
         specifier: catalog:package
@@ -1598,8 +1598,8 @@ packages:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
 
-  hono@4.12.8:
-    resolution: {integrity: sha512-VJCEvtrezO1IAR+kqEYnxUOoStaQPGrCmX3j4wDTNOcD1uRPFpGlwQUIW8niPuvHXaTUxeOUl5MMDGrl+tmO9A==}
+  hono@4.12.14:
+    resolution: {integrity: sha512-am5zfg3yu6sqn5yjKBNqhnTX7Cv+m00ox+7jbaKkrLMRJ4rAdldd1xPd/JzbBWspqaQv6RSTrgFN95EsfhC+7w==}
     engines: {node: '>=16.9.0'}
 
   html-escaper@2.0.2:
@@ -2511,21 +2511,21 @@ snapshots:
       '@shikijs/types': 3.23.0
       '@shikijs/vscode-textmate': 10.0.2
 
-  '@hono/node-server@1.19.14(hono@4.12.8)':
+  '@hono/node-server@1.19.14(hono@4.12.14)':
     dependencies:
-      hono: 4.12.8
+      hono: 4.12.14
 
-  '@hono/zod-openapi@1.2.3(hono@4.12.8)(zod@4.3.6)':
+  '@hono/zod-openapi@1.2.3(hono@4.12.14)(zod@4.3.6)':
     dependencies:
       '@asteasolutions/zod-to-openapi': 8.5.0(zod@4.3.6)
-      '@hono/zod-validator': 0.7.6(hono@4.12.8)(zod@4.3.6)
-      hono: 4.12.8
+      '@hono/zod-validator': 0.7.6(hono@4.12.14)(zod@4.3.6)
+      hono: 4.12.14
       openapi3-ts: 4.5.0
       zod: 4.3.6
 
-  '@hono/zod-validator@0.7.6(hono@4.12.8)(zod@4.3.6)':
+  '@hono/zod-validator@0.7.6(hono@4.12.14)(zod@4.3.6)':
     dependencies:
-      hono: 4.12.8
+      hono: 4.12.14
       zod: 4.3.6
 
   '@img/colour@1.1.0': {}
@@ -2809,10 +2809,10 @@ snapshots:
 
   '@scalar/helpers@0.4.2': {}
 
-  '@scalar/hono-api-reference@0.10.4(hono@4.12.8)':
+  '@scalar/hono-api-reference@0.10.4(hono@4.12.14)':
     dependencies:
       '@scalar/core': 0.4.4
-      hono: 4.12.8
+      hono: 4.12.14
 
   '@scalar/types@0.7.4':
     dependencies:
@@ -3193,7 +3193,7 @@ snapshots:
 
   has-flag@4.0.0: {}
 
-  hono@4.12.8: {}
+  hono@4.12.14: {}
 
   html-escaper@2.0.2: {}
 
