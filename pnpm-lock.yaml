@@ -23,8 +23,11 @@ catalogs:
       specifier: ^1.19.5
       version: 1.19.14
     '@scalar/hono-api-reference':
-      specifier: ^0.10.0
-      version: 0.10.14
+      specifier: ^0.11.0
+      version: 0.11.6
+    '@types/node':
+      specifier: ^20.19.19
+      version: 20.19.43
     wrangler:
       specifier: ^4.45.0
       version: 4.87.0
@@ -60,7 +63,7 @@ importers:
         version: 1.4.0(hono@4.12.14)(zod@4.3.6)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
-        version: 0.10.14(hono@4.12.14)
+        version: 0.11.6(hono@4.12.14)
       '@types/node':
         specifier: catalog:examples
         version: 20.19.43
@@ -102,7 +105,7 @@ importers:
         version: 1.4.0(hono@4.12.14)(zod@4.4.3)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
-        version: 0.10.14(hono@4.12.14)
+        version: 0.11.6(hono@4.12.14)
       hono:
         specifier: 'catalog:'
         version: 4.12.14
@@ -124,7 +127,7 @@ importers:
         version: 1.4.0(hono@4.12.14)(zod@4.4.3)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
-        version: 0.10.14(hono@4.12.14)
+        version: 0.11.6(hono@4.12.14)
       hono:
         specifier: 'catalog:'
         version: 4.12.14
@@ -1348,23 +1351,31 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@scalar/client-side-rendering@0.1.7':
-    resolution: {integrity: sha512-IDzjKF93jrOljlvKBsLHXT1FPWgz56jFrMPC+iLihREp1qH8wF92mG8Zpakw8cURkEuw5WijRk0xNBP2moGyuw==}
+  '@scalar/client-side-rendering@0.2.6':
+    resolution: {integrity: sha512-wvnyBtNdYob6CdmpFqLSQoGM5q5Ra8bXyq713T/u8Nq1NXbULk1znz/LyR78u8g++0G8bkxnVzhvOf7s9FwHFw==}
     engines: {node: '>=22'}
 
-  '@scalar/helpers@0.6.0':
-    resolution: {integrity: sha512-pfSamAgBxqFeE8IpEG6uGkHlnPhY1CLeOTttV9+vKQbrBk5b7vvyTsUXv0Hz4kNU1TFrxcTTPE+Akn5S+jlTtQ==}
+  '@scalar/helpers@0.9.0':
+    resolution: {integrity: sha512-M34CLRCttqC1bXthI/QSzQj0s5C6nrU2PFWf/vOT3RpycbiGDGQbqR+5RfFzpOIQvRqbHfNdcRbeiZBw+vCbkQ==}
     engines: {node: '>=22'}
 
-  '@scalar/hono-api-reference@0.10.14':
-    resolution: {integrity: sha512-LCIT4ul3c4MyD7shhxsWcvvOABt0fEHNQID2n+2TPeItc/MR2qCjjp/QfqD+JoQ7zbc0nnzh1kwRR06MVBmnUA==}
+  '@scalar/hono-api-reference@0.11.6':
+    resolution: {integrity: sha512-fq75HkPnM6YKBURAcpIFnf6gC4LNo58qerkje0FUlOYyCiIJ6/QIW9/Sbz58BoYuJKaqltWsOvjv6KarH1BicA==}
     engines: {node: '>=22'}
     peerDependencies:
       hono: ^4.12.5
 
-  '@scalar/types@0.9.6':
-    resolution: {integrity: sha512-UaCQQcscFTJdxZREE8KhUdSJgaDlc44TZbmWcZffs4m1hzqOvEI7lEBS13iBpLq7/cxUXFgyJdecywvNqJ0PkA==}
+  '@scalar/schemas@0.7.0':
+    resolution: {integrity: sha512-Roj0e7S29yTbGojwdx/b8C1H5arVN4h/VSPrtQ5vb9NT2ZAbrfPQVmpQYrF845rKOWX7kSzIvyBwrKNEMIAkxA==}
     engines: {node: '>=22'}
+
+  '@scalar/types@0.16.0':
+    resolution: {integrity: sha512-26OSrvZjKWZ7F236wWmJajBGDVFJuvXFJqKPFqbt/PxlgZKXQXfJsZorASRQmdNogT576nxYalQ7oaYWEnQwfw==}
+    engines: {node: '>=22'}
+
+  '@scalar/validation@0.6.0':
+    resolution: {integrity: sha512-tpmmG+/xRE2Kn9RpflU3AIyZv08v10+E1ZrJCx7z6+/91zHVxy0M73kC1LT4/8PbYNt85ywyC8+n+D99JdMcGA==}
+    engines: {node: '>=20'}
 
   '@shikijs/engine-oniguruma@3.23.0':
     resolution: {integrity: sha512-1nWINwKXxKKLqPibT5f4pAFLej9oZzQTsby8942OTlsJzOBZ0MWKiwzMsd+jhzu8YPCHAswGnnN1YtQfirL35g==}
@@ -2884,23 +2895,32 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.61.1':
     optional: true
 
-  '@scalar/client-side-rendering@0.1.7':
+  '@scalar/client-side-rendering@0.2.6':
     dependencies:
-      '@scalar/types': 0.9.6
+      '@scalar/schemas': 0.7.0
+      '@scalar/types': 0.16.0
+      '@scalar/validation': 0.6.0
 
-  '@scalar/helpers@0.6.0': {}
+  '@scalar/helpers@0.9.0': {}
 
-  '@scalar/hono-api-reference@0.10.14(hono@4.12.14)':
+  '@scalar/hono-api-reference@0.11.6(hono@4.12.14)':
     dependencies:
-      '@scalar/client-side-rendering': 0.1.7
+      '@scalar/client-side-rendering': 0.2.6
       hono: 4.12.14
 
-  '@scalar/types@0.9.6':
+  '@scalar/schemas@0.7.0':
     dependencies:
-      '@scalar/helpers': 0.6.0
+      '@scalar/helpers': 0.9.0
+      '@scalar/validation': 0.6.0
+
+  '@scalar/types@0.16.0':
+    dependencies:
+      '@scalar/helpers': 0.9.0
       nanoid: 5.1.11
       type-fest: 5.6.0
-      zod: 4.3.6
+      zod: 4.4.3
+
+  '@scalar/validation@0.6.0': {}
 
   '@shikijs/engine-oniguruma@3.23.0':
     dependencies:
