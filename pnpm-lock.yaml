@@ -12,9 +12,12 @@ catalogs:
     hono:
       specifier: ^4.10.3
       version: 4.12.27
+    tsx:
+      specifier: ^4.20.6
+      version: 4.22.4
     typescript:
-      specifier: ^5.9.3
-      version: 5.9.3
+      specifier: ^6.0.0
+      version: 6.0.3
   examples:
     '@hono/node-server':
       specifier: ^1.19.5
@@ -75,16 +78,16 @@ importers:
         version: 4.12.27
       tsup:
         specifier: catalog:package
-        version: 8.5.1(postcss@8.5.15)(tsx@4.22.4)(typescript@5.9.3)(yaml@2.9.0)
+        version: 8.5.1(postcss@8.5.15)(tsx@4.22.4)(typescript@6.0.3)(yaml@2.9.0)
       tsx:
         specifier: 'catalog:'
         version: 4.22.4
       typedoc:
         specifier: catalog:package
-        version: 0.28.19(typescript@5.9.3)
+        version: 0.28.19(typescript@6.0.3)
       typescript:
         specifier: 'catalog:'
-        version: 5.9.3
+        version: 6.0.3
       vitest:
         specifier: catalog:package
         version: 4.1.9(@types/node@20.19.43)(@vitest/coverage-v8@4.1.9)(@vitest/ui@4.1.9)(vite@7.1.12(@types/node@20.19.43)(tsx@4.22.4)(yaml@2.9.0))
@@ -140,7 +143,7 @@ importers:
         version: 4.22.4
       typescript:
         specifier: 'catalog:'
-        version: 5.9.3
+        version: 6.0.3
 
   package:
     dependencies:
@@ -159,16 +162,16 @@ importers:
         version: 4.1.9(vitest@4.1.9)
       tsup:
         specifier: catalog:package
-        version: 8.5.1(postcss@8.5.15)(tsx@4.22.4)(typescript@5.9.3)(yaml@2.9.0)
+        version: 8.5.1(postcss@8.5.15)(tsx@4.22.4)(typescript@6.0.3)(yaml@2.9.0)
       tsx:
         specifier: 'catalog:'
         version: 4.22.4
       typedoc:
         specifier: catalog:package
-        version: 0.28.19(typescript@5.9.3)
+        version: 0.28.19(typescript@6.0.3)
       typescript:
         specifier: 'catalog:'
-        version: 5.9.3
+        version: 6.0.3
       vitest:
         specifier: catalog:package
         version: 4.1.9(@types/node@24.9.1)(@vitest/coverage-v8@4.1.9)(@vitest/ui@4.1.9)(vite@7.1.12(@types/node@24.9.1)(tsx@4.22.4)(yaml@2.9.0))
@@ -2024,8 +2027,8 @@ packages:
     peerDependencies:
       typescript: 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x || 5.5.x || 5.6.x || 5.7.x || 5.8.x || 5.9.x || 6.0.x
 
-  typescript@5.9.3:
-    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -3651,7 +3654,7 @@ snapshots:
   tslib@2.8.1:
     optional: true
 
-  tsup@8.5.1(postcss@8.5.15)(tsx@4.22.4)(typescript@5.9.3)(yaml@2.9.0):
+  tsup@8.5.1(postcss@8.5.15)(tsx@4.22.4)(typescript@6.0.3)(yaml@2.9.0):
     dependencies:
       bundle-require: 5.1.0(esbuild@0.27.0)
       cac: 6.7.14
@@ -3672,7 +3675,7 @@ snapshots:
       tree-kill: 1.2.2
     optionalDependencies:
       postcss: 8.5.15
-      typescript: 5.9.3
+      typescript: 6.0.3
     transitivePeerDependencies:
       - jiti
       - supports-color
@@ -3689,16 +3692,16 @@ snapshots:
     dependencies:
       tagged-tag: 1.0.0
 
-  typedoc@0.28.19(typescript@5.9.3):
+  typedoc@0.28.19(typescript@6.0.3):
     dependencies:
       '@gerrit0/mini-shiki': 3.23.0
       lunr: 2.3.9
       markdown-it: 14.1.1
       minimatch: 10.2.5
-      typescript: 5.9.3
+      typescript: 6.0.3
       yaml: 2.8.4
 
-  typescript@5.9.3: {}
+  typescript@6.0.3: {}
 
   uc.micro@2.1.0: {}
 
