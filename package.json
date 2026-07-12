@@ -17,7 +17,7 @@
     "examples:cloudflare-workers:cf-typegen": "pnpm -C examples/cloudflare-workers cf-typegen",
     "examples:cloudflare-workers:openapi": "pnpm -C examples/cloudflare-workers openapi"
   },
-  "packageManager": "pnpm@10.34.4",
+  "packageManager": "pnpm@11.12.0",
   "devDependencies": {
     "@hono/node-server": "catalog:examples",
     "@hono/zod-openapi": "catalog:",
