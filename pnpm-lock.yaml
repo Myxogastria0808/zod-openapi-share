@@ -22,9 +22,6 @@ catalogs:
     '@hono/node-server':
       specifier: ^2.0.0
       version: 2.0.8
-    '@scalar/hono-api-reference':
-      specifier: ^0.11.0
-      version: 0.11.6
     '@types/node':
       specifier: ^24.0.0
       version: 24.9.1
@@ -63,7 +60,7 @@ importers:
         version: 1.4.0(hono@4.12.27)(zod@4.3.6)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
-        version: 0.11.6(hono@4.12.27)
+        version: 0.11.9(hono@4.12.27)
       '@types/node':
         specifier: catalog:examples
         version: 24.9.1
@@ -78,7 +75,7 @@ importers:
         version: 4.12.27
       tsup:
         specifier: catalog:package
-        version: 8.5.1(postcss@8.5.15)(tsx@4.22.4)(typescript@6.0.3)(yaml@2.9.0)
+        version: 8.5.1(postcss@8.5.17)(tsx@4.22.4)(typescript@6.0.3)(yaml@2.9.0)
       tsx:
         specifier: 'catalog:'
         version: 4.22.4
@@ -105,7 +102,7 @@ importers:
         version: 1.4.0(hono@4.12.27)(zod@4.4.3)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
-        version: 0.11.6(hono@4.12.27)
+        version: 0.11.9(hono@4.12.27)
       hono:
         specifier: 'catalog:'
         version: 4.12.27
@@ -127,7 +124,7 @@ importers:
         version: 1.4.0(hono@4.12.27)(zod@4.4.3)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
-        version: 0.11.6(hono@4.12.27)
+        version: 0.11.9(hono@4.12.27)
       hono:
         specifier: 'catalog:'
         version: 4.12.27
@@ -162,7 +159,7 @@ importers:
         version: 4.1.9(vitest@4.1.9)
       tsup:
         specifier: catalog:package
-        version: 8.5.1(postcss@8.5.15)(tsx@4.22.4)(typescript@6.0.3)(yaml@2.9.0)
+        version: 8.5.1(postcss@8.5.17)(tsx@4.22.4)(typescript@6.0.3)(yaml@2.9.0)
       tsx:
         specifier: 'catalog:'
         version: 4.22.4
@@ -1351,26 +1348,26 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@scalar/client-side-rendering@0.2.6':
-    resolution: {integrity: sha512-wvnyBtNdYob6CdmpFqLSQoGM5q5Ra8bXyq713T/u8Nq1NXbULk1znz/LyR78u8g++0G8bkxnVzhvOf7s9FwHFw==}
+  '@scalar/client-side-rendering@0.3.2':
+    resolution: {integrity: sha512-HXgfSnSQSLaTZupSmN2w4O1Gv0wXdFl+GtrZHQEoNQ4HSzgCtk9fKcmSVxaZiPjyx6eon/x3Ic+Ka5T4tXskyA==}
     engines: {node: '>=22'}
 
   '@scalar/helpers@0.9.0':
     resolution: {integrity: sha512-M34CLRCttqC1bXthI/QSzQj0s5C6nrU2PFWf/vOT3RpycbiGDGQbqR+5RfFzpOIQvRqbHfNdcRbeiZBw+vCbkQ==}
     engines: {node: '>=22'}
 
-  '@scalar/hono-api-reference@0.11.6':
-    resolution: {integrity: sha512-fq75HkPnM6YKBURAcpIFnf6gC4LNo58qerkje0FUlOYyCiIJ6/QIW9/Sbz58BoYuJKaqltWsOvjv6KarH1BicA==}
+  '@scalar/hono-api-reference@0.11.9':
+    resolution: {integrity: sha512-/Rx/kozi18sfWLP6y9qK/xhjO68i667o2aFXWnRfxW0TKL2D6A+LGtWCHQTgTONPKZe0TX9iSMSWf0vy0UOsbA==}
     engines: {node: '>=22'}
     peerDependencies:
       hono: ^4.12.5
 
-  '@scalar/schemas@0.7.0':
-    resolution: {integrity: sha512-Roj0e7S29yTbGojwdx/b8C1H5arVN4h/VSPrtQ5vb9NT2ZAbrfPQVmpQYrF845rKOWX7kSzIvyBwrKNEMIAkxA==}
+  '@scalar/schemas@0.7.2':
+    resolution: {integrity: sha512-6Ble6WcbiKgD3ypIva+wgZv1qIClmeEjXA6jrOo1bKpYUu6sh4e89LZxDK+LULa2jQl/2O5GEaa6aZ0ImlpkHg==}
     engines: {node: '>=22'}
 
-  '@scalar/types@0.16.0':
-    resolution: {integrity: sha512-26OSrvZjKWZ7F236wWmJajBGDVFJuvXFJqKPFqbt/PxlgZKXQXfJsZorASRQmdNogT576nxYalQ7oaYWEnQwfw==}
+  '@scalar/types@0.16.2':
+    resolution: {integrity: sha512-QAlCtDVRsX/UV1N9ctLqPsKQy84eceFf4dMnTZM0JhaRfwS/Ovwp8oFf3POSpqQILNiqLFZLE6IV6p/5rNoAag==}
     engines: {node: '>=22'}
 
   '@scalar/validation@0.6.0':
@@ -1766,13 +1763,13 @@ packages:
   mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
 
-  nanoid@3.3.15:
-    resolution: {integrity: sha512-y7Wygv/7mEOvxTuEQDB8StXdMRBWf1kR/tlhAzBRUFkB2jfcLOAxO/SHmOO2zgz1pVgK29/kyupn059/bCHdjA==}
+  nanoid@3.3.16:
+    resolution: {integrity: sha512-bzlKTyNJ7+LdGIIwy8ijFpIqEQIvafahV7eYykJ8Cvh42EdJeODoJ6gUJXpQJvej1BddH8OqTXZNE/KfbWAu8Q==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  nanoid@5.1.11:
-    resolution: {integrity: sha512-v+KEsUv2ps74PaSKv0gHTxTCgMXOIfBEbaqa6w6ISIGC7ZsvHN4N9oJ8d4cmf0n5oTzQz2SLmThbQWhjd/8eKg==}
+  nanoid@5.1.16:
+    resolution: {integrity: sha512-kVrnsrJqMR8+oLJnGEmSWw9BivK5mt7H3FZatVRjrc5wGqFYuBxX1yG7+A7Gi5AefkX6t/oCkizcQgpu0cY1dQ==}
     engines: {node: ^18 || >=20}
     hasBin: true
 
@@ -1815,6 +1812,10 @@ packages:
     resolution: {integrity: sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==}
     engines: {node: '>=12'}
 
+  picomatch@4.0.5:
+    resolution: {integrity: sha512-RvwwcruNjI1ncT5xRakeyS9Lf8lcItv34KD+aif+VH9kduAyfYBipGh12274xtenIPZ119/R9BdTBa8gAwSh0A==}
+    engines: {node: '>=12'}
+
   pirates@4.0.7:
     resolution: {integrity: sha512-TfySrs/5nm8fQJDcBDuUng3VOUKsd7S+zqvbOTiGXHfxX4wK31ard+hoNuvkicM/2YFzlpDgABOevKSsB4G/FA==}
     engines: {node: '>= 6'}
@@ -1840,8 +1841,8 @@ packages:
       yaml:
         optional: true
 
-  postcss@8.5.15:
-    resolution: {integrity: sha512-FfR8sjd4em2T6fb3I2MwAJU7HWVMr9zba+enmQeeWFfCbm+UOC/0X4DS8XtpUTMwWMGbjKYP7xjfNekzyGmB3A==}
+  postcss@8.5.17:
+    resolution: {integrity: sha512-J7EF+8X+CzRPaJPOv9Ck2wNWJvGnnl3PcNPAdGg6GTLjyVpyQ0yATMSXRFRV01BviT/9Gwuc3rjEyJbDJG9a4w==}
     engines: {node: ^10 || ^12 || >=14}
 
   punycode.js@2.3.1:
@@ -2013,8 +2014,8 @@ packages:
     engines: {node: '>=18.0.0'}
     hasBin: true
 
-  type-fest@5.6.0:
-    resolution: {integrity: sha512-8ZiHFm91orbSAe2PSAiSVBVko18pbhbiB3U9GglSzF/zCGkR+rxpHx6sEMCUm4kxY4LjDIUGgCfUMtwfZfjfUA==}
+  type-fest@5.8.0:
+    resolution: {integrity: sha512-YGYEVz3Fm5iy/AybuA0oyNFq7H4CgQNfRp/qfe8nurE1kuCeNm3/vfm9X4Mtl+qLyaKJUh5xrFZwogr41SMjYA==}
     engines: {node: '>=20'}
 
   typedoc@0.28.19:
@@ -2884,30 +2885,30 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.62.2':
     optional: true
 
-  '@scalar/client-side-rendering@0.2.6':
+  '@scalar/client-side-rendering@0.3.2':
     dependencies:
-      '@scalar/schemas': 0.7.0
-      '@scalar/types': 0.16.0
+      '@scalar/schemas': 0.7.2
+      '@scalar/types': 0.16.2
       '@scalar/validation': 0.6.0
 
   '@scalar/helpers@0.9.0': {}
 
-  '@scalar/hono-api-reference@0.11.6(hono@4.12.27)':
+  '@scalar/hono-api-reference@0.11.9(hono@4.12.27)':
     dependencies:
-      '@scalar/client-side-rendering': 0.2.6
+      '@scalar/client-side-rendering': 0.3.2
       hono: 4.12.27
 
-  '@scalar/schemas@0.7.0':
+  '@scalar/schemas@0.7.2':
     dependencies:
       '@scalar/helpers': 0.9.0
       '@scalar/validation': 0.6.0
 
-  '@scalar/types@0.16.0':
+  '@scalar/types@0.16.2':
     dependencies:
       '@scalar/helpers': 0.9.0
-      nanoid: 5.1.11
-      type-fest: 5.6.0
-      zod: 4.4.3
+      nanoid: 5.1.16
+      type-fest: 5.8.0
+      zod: 4.3.6
 
   '@scalar/validation@0.6.0': {}
 
@@ -3245,6 +3246,10 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.4
 
+  fdir@6.5.0(picomatch@4.0.5):
+    optionalDependencies:
+      picomatch: 4.0.5
+
   fflate@0.8.3: {}
 
   fix-dts-default-cjs-exports@1.0.1:
@@ -3385,9 +3390,9 @@ snapshots:
       object-assign: 4.1.1
       thenify-all: 1.6.0
 
-  nanoid@3.3.15: {}
+  nanoid@3.3.16: {}
 
-  nanoid@5.1.11: {}
+  nanoid@5.1.16: {}
 
   object-assign@4.1.1: {}
 
@@ -3416,6 +3421,8 @@ snapshots:
 
   picomatch@4.0.4: {}
 
+  picomatch@4.0.5: {}
+
   pirates@4.0.7: {}
 
   pkg-types@1.3.1:
@@ -3424,17 +3431,17 @@ snapshots:
       mlly: 1.8.0
       pathe: 2.0.3
 
-  postcss-load-config@6.0.1(postcss@8.5.15)(tsx@4.22.4)(yaml@2.9.0):
+  postcss-load-config@6.0.1(postcss@8.5.17)(tsx@4.22.4)(yaml@2.9.0):
     dependencies:
       lilconfig: 3.1.3
     optionalDependencies:
-      postcss: 8.5.15
+      postcss: 8.5.17
       tsx: 4.22.4
       yaml: 2.9.0
 
-  postcss@8.5.15:
+  postcss@8.5.17:
     dependencies:
-      nanoid: 3.3.15
+      nanoid: 3.3.16
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -3635,7 +3642,7 @@ snapshots:
   tslib@2.8.1:
     optional: true
 
-  tsup@8.5.1(postcss@8.5.15)(tsx@4.22.4)(typescript@6.0.3)(yaml@2.9.0):
+  tsup@8.5.1(postcss@8.5.17)(tsx@4.22.4)(typescript@6.0.3)(yaml@2.9.0):
     dependencies:
       bundle-require: 5.1.0(esbuild@0.27.0)
       cac: 6.7.14
@@ -3646,7 +3653,7 @@ snapshots:
       fix-dts-default-cjs-exports: 1.0.1
       joycon: 3.1.1
       picocolors: 1.1.1
-      postcss-load-config: 6.0.1(postcss@8.5.15)(tsx@4.22.4)(yaml@2.9.0)
+      postcss-load-config: 6.0.1(postcss@8.5.17)(tsx@4.22.4)(yaml@2.9.0)
       resolve-from: 5.0.0
       rollup: 4.53.3
       source-map: 0.7.6
@@ -3655,7 +3662,7 @@ snapshots:
       tinyglobby: 0.2.15
       tree-kill: 1.2.2
     optionalDependencies:
-      postcss: 8.5.15
+      postcss: 8.5.17
       typescript: 6.0.3
     transitivePeerDependencies:
       - jiti
@@ -3669,7 +3676,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  type-fest@5.6.0:
+  type-fest@5.8.0:
     dependencies:
       tagged-tag: 1.0.0
 
@@ -3699,9 +3706,9 @@ snapshots:
   vite@7.1.12(@types/node@24.9.1)(tsx@4.22.4)(yaml@2.9.0):
     dependencies:
       esbuild: 0.25.12
-      fdir: 6.5.0(picomatch@4.0.4)
-      picomatch: 4.0.4
-      postcss: 8.5.15
+      fdir: 6.5.0(picomatch@4.0.5)
+      picomatch: 4.0.5
+      postcss: 8.5.17
       rollup: 4.62.2
       tinyglobby: 0.2.17
     optionalDependencies:
