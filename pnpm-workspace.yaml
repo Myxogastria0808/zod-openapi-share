@@ -2,22 +2,27 @@ packages:
   - package
   - examples/*
 
+allowBuilds:
+  esbuild: true
+  sharp: true
+  workerd: true
+
 catalog:
-  '@hono/zod-openapi': ^1.1.4
-  hono: ^4.10.3
-  tsx: ^4.20.6
+  '@hono/zod-openapi': ^1.4.0
+  hono: ^4.12.29
+  tsx: ^4.23.0
   typescript: ^6.0.0
 
 catalogs:
   examples:
-    '@hono/node-server': ^2.0.0
-    '@scalar/hono-api-reference': ^0.11.0
-    '@types/node': ^24.0.0
-    wrangler: ^4.45.0
+    '@hono/node-server': ^2.0.8
+    '@scalar/hono-api-reference': ^0.11.9
+    '@types/node': ^26.1.1
+    wrangler: ^4.110.0
   package:
-    '@vitest/coverage-v8': ^4.0.3
-    '@vitest/ui': ^4.0.3
-    tsup: ^8.5.0
-    typedoc: ^0.28.14
-    vitest: ^4.0.3
-    zod: ^4.1.12
+    '@vitest/coverage-v8': ^4.1.10
+    '@vitest/ui': ^4.1.10
+    tsup: ^8.5.1
+    typedoc: ^0.28.20
+    vitest: ^4.1.10
+    zod: ^4.4.3

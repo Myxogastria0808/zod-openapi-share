@@ -64,7 +64,7 @@ app.get('/scalar', Scalar({ url: '/openapi' }));
  * Add route to app instance
  */
 app.openapi(rootRoute, (c) => {
-  return c.json({ result: 'Hello World!' });
+  return c.json({ result: 'Hello World!' }, 200);
 });
 
 export default app;

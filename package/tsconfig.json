@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node"
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "ignoreDeprecations": "6.0"
   }
 }

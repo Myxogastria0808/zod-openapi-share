@@ -67,6 +67,6 @@
     "@hono/zod-openapi": "catalog:",
     "hono": "catalog:"
   },
-  "packageManager": "pnpm@10.34.4"
+  "packageManager": "pnpm@11.12.0"
 }
 
