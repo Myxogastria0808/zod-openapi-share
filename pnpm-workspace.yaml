@@ -11,7 +11,7 @@ catalog:
   '@hono/zod-openapi': ^1.4.0
   hono: ^4.12.29
   tsx: ^4.23.0
-  typescript: ^6.0.0
+  typescript: ^7.0.0
 
 catalogs:
   examples:
