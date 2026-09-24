@@ -47,9 +47,6 @@ catalogs:
     vitest:
       specifier: ^4.1.10
       version: 4.1.10
-    zod:
-      specifier: ^4.4.3
-      version: 4.4.3
 
 importers:
 
@@ -60,7 +57,7 @@ importers:
         version: 2.0.8(hono@4.12.29)
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.4.0(hono@4.12.29)(zod@4.4.3)
+        version: 1.4.0(hono@4.12.29)(zod@4.6.5)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
         version: 0.11.9(hono@4.12.29)
@@ -96,13 +93,13 @@ importers:
         version: 4.110.0
       zod:
         specifier: catalog:package
-        version: 4.4.3
+        version: 4.6.5
 
   examples/cloudflare-workers:
     dependencies:
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.4.0(hono@4.12.29)(zod@4.4.3)
+        version: 1.4.0(hono@4.12.29)(zod@4.6.5)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
         version: 0.11.9(hono@4.12.29)
@@ -127,7 +124,7 @@ importers:
         version: 2.0.8(hono@4.12.29)
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.4.0(hono@4.12.29)(zod@4.4.3)
+        version: 1.4.0(hono@4.12.29)(zod@4.6.5)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
         version: 0.11.9(hono@4.12.29)
@@ -152,7 +149,7 @@ importers:
     dependencies:
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.4.0(hono@4.12.29)(zod@4.4.3)
+        version: 1.4.0(hono@4.12.29)(zod@4.6.5)
       hono:
         specifier: 'catalog:'
         version: 4.12.29
@@ -180,7 +177,7 @@ importers:
         version: 4.1.10(@types/node@26.1.1)(@vitest/coverage-v8@4.1.10)(@vitest/ui@4.1.10)(vite@7.1.12(@types/node@26.1.1)(tsx@4.23.0)(yaml@2.9.0))
       zod:
         specifier: catalog:package
-        version: 4.4.3
+        version: 4.6.5
 
 packages:
 
@@ -1750,15 +1747,15 @@ packages:
   youch@4.1.0-beta.10:
     resolution: {integrity: sha512-rLfVLB4FgQneDr0dv1oddCVZmKjcJ6yX6mS4pU82Mq/Dt9a3cLZQ62pDBL4AUO+uVrCvtWz3ZFUL2HFAFJ/BXQ==}
 
-  zod@4.4.3:
-    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
+  zod@4.6.5:
+    resolution: {integrity: sha512-v5l/aFXZQeai4awLbOpSoHecE9UiMrnfx75tEXLjNonXVARxQ5mOeipTjROUchszUNCqnE+hqAMujRsRHsut2Q==}
 
 snapshots:
 
-  '@asteasolutions/zod-to-openapi@8.5.0(zod@4.4.3)':
+  '@asteasolutions/zod-to-openapi@8.5.0(zod@4.6.5)':
     dependencies:
       openapi3-ts: 4.6.0
-      zod: 4.4.3
+      zod: 4.6.5
 
   '@babel/helper-string-parser@7.29.7': {}
 
@@ -2053,18 +2050,18 @@ snapshots:
     dependencies:
       hono: 4.12.29
 
-  '@hono/zod-openapi@1.4.0(hono@4.12.29)(zod@4.4.3)':
+  '@hono/zod-openapi@1.4.0(hono@4.12.29)(zod@4.6.5)':
     dependencies:
-      '@asteasolutions/zod-to-openapi': 8.5.0(zod@4.4.3)
-      '@hono/zod-validator': 0.8.0(hono@4.12.29)(zod@4.4.3)
+      '@asteasolutions/zod-to-openapi': 8.5.0(zod@4.6.5)
+      '@hono/zod-validator': 0.8.0(hono@4.12.29)(zod@4.6.5)
       hono: 4.12.29
       openapi3-ts: 4.6.0
-      zod: 4.4.3
+      zod: 4.6.5
 
-  '@hono/zod-validator@0.8.0(hono@4.12.29)(zod@4.4.3)':
+  '@hono/zod-validator@0.8.0(hono@4.12.29)(zod@4.6.5)':
     dependencies:
       hono: 4.12.29
-      zod: 4.4.3
+      zod: 4.6.5
 
   '@img/colour@1.1.0': {}
 
@@ -2293,7 +2290,7 @@ snapshots:
       '@scalar/helpers': 0.9.0
       nanoid: 5.1.16
       type-fest: 5.8.0
-      zod: 4.4.3
+      zod: 4.6.5
 
   '@scalar/validation@0.6.0': {}
 
@@ -2996,4 +2993,4 @@ snapshots:
       cookie: 1.1.1
       youch-core: 0.3.3
 
-  zod@4.4.3: {}
+  zod@4.6.5: {}
