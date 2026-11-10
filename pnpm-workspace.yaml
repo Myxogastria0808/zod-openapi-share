@@ -16,7 +16,7 @@ catalog:
 catalogs:
   examples:
     '@hono/node-server': ^2.0.8
-    '@scalar/hono-api-reference': ^0.11.9
+    '@scalar/hono-api-reference': ^0.12.0
     '@types/node': ^26.1.1
     wrangler: ^4.110.0
   package:
