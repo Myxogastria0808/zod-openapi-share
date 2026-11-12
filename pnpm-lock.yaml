@@ -19,6 +19,9 @@ catalogs:
       specifier: ^6.0.0
       version: 6.0.3
   examples:
+    '@hono/node-server':
+      specifier: ^2.0.8
+      version: 2.1.7
     '@scalar/hono-api-reference':
       specifier: ^0.12.0
       version: 0.12.18
@@ -44,9 +47,6 @@ catalogs:
     vitest:
       specifier: ^4.1.10
       version: 4.1.10
-    zod:
-      specifier: ^4.4.3
-      version: 4.4.3
 
 importers:
 
@@ -57,7 +57,7 @@ importers:
         version: 2.1.7(hono@4.12.29)
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.4.0(hono@4.12.29)(zod@4.4.3)
+        version: 1.4.0(hono@4.12.29)(zod@4.6.7)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
         version: 0.12.18(hono@4.12.29)
@@ -93,13 +93,13 @@ importers:
         version: 4.110.0
       zod:
         specifier: catalog:package
-        version: 4.4.3
+        version: 4.6.7
 
   examples/cloudflare-workers:
     dependencies:
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.4.0(hono@4.12.29)(zod@4.4.3)
+        version: 1.4.0(hono@4.12.29)(zod@4.6.7)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
         version: 0.12.18(hono@4.12.29)
@@ -124,7 +124,7 @@ importers:
         version: 2.1.7(hono@4.12.29)
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.4.0(hono@4.12.29)(zod@4.4.3)
+        version: 1.4.0(hono@4.12.29)(zod@4.6.7)
       '@scalar/hono-api-reference':
         specifier: catalog:examples
         version: 0.12.18(hono@4.12.29)
@@ -149,7 +149,7 @@ importers:
     dependencies:
       '@hono/zod-openapi':
         specifier: 'catalog:'
-        version: 1.4.0(hono@4.12.29)(zod@4.4.3)
+        version: 1.4.0(hono@4.12.29)(zod@4.6.7)
       hono:
         specifier: 'catalog:'
         version: 4.12.29
@@ -177,7 +177,7 @@ importers:
         version: 4.1.10(@types/node@26.1.1)(@vitest/coverage-v8@4.1.10)(@vitest/ui@4.1.10)(vite@7.1.12(@types/node@26.1.1)(tsx@4.23.0)(yaml@2.9.0))
       zod:
         specifier: catalog:package
-        version: 4.4.3
+        version: 4.6.7
 
 packages:
 
@@ -1747,18 +1747,15 @@ packages:
   youch@4.1.0-beta.10:
     resolution: {integrity: sha512-rLfVLB4FgQneDr0dv1oddCVZmKjcJ6yX6mS4pU82Mq/Dt9a3cLZQ62pDBL4AUO+uVrCvtWz3ZFUL2HFAFJ/BXQ==}
 
-  zod@4.4.3:
-    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
-
   zod@4.6.7:
     resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
 
 snapshots:
 
-  '@asteasolutions/zod-to-openapi@8.5.0(zod@4.4.3)':
+  '@asteasolutions/zod-to-openapi@8.5.0(zod@4.6.7)':
     dependencies:
       openapi3-ts: 4.6.0
-      zod: 4.4.3
+      zod: 4.6.7
 
   '@babel/helper-string-parser@7.29.7': {}
 
@@ -2053,18 +2050,18 @@ snapshots:
     dependencies:
       hono: 4.12.29
 
-  '@hono/zod-openapi@1.4.0(hono@4.12.29)(zod@4.4.3)':
+  '@hono/zod-openapi@1.4.0(hono@4.12.29)(zod@4.6.7)':
     dependencies:
-      '@asteasolutions/zod-to-openapi': 8.5.0(zod@4.4.3)
-      '@hono/zod-validator': 0.8.0(hono@4.12.29)(zod@4.4.3)
+      '@asteasolutions/zod-to-openapi': 8.5.0(zod@4.6.7)
+      '@hono/zod-validator': 0.8.0(hono@4.12.29)(zod@4.6.7)
       hono: 4.12.29
       openapi3-ts: 4.6.0
-      zod: 4.4.3
+      zod: 4.6.7
 
-  '@hono/zod-validator@0.8.0(hono@4.12.29)(zod@4.4.3)':
+  '@hono/zod-validator@0.8.0(hono@4.12.29)(zod@4.6.7)':
     dependencies:
       hono: 4.12.29
-      zod: 4.4.3
+      zod: 4.6.7
 
   '@img/colour@1.1.0': {}
 
@@ -2997,7 +2994,5 @@ snapshots:
       '@speed-highlight/core': 1.2.17
       cookie: 1.1.1
       youch-core: 0.3.3
-
-  zod@4.4.3: {}
 
   zod@4.6.7: {}
